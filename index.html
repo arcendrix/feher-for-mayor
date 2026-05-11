@@ -4,186 +4,151 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Feher for Mayor | London, Ontario</title>
-  <meta name="description" content="John Feher for Mayor — practical leadership for a growing London, Ontario." />
+  <meta name="description" content="John Feher for Mayor — a calm, practical campaign for a city that works." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="John Feher for Mayor home">
-      <span class="brand-name"><strong>John Feher</strong><small>For Mayor</small></span>
+      <span class="brand-kicker">John Feher</span>
+      <strong>For Mayor</strong>
     </a>
     <button class="menu-toggle" aria-label="Open menu">Menu</button>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#vision">Vision</a>
-      <a href="#housing">Housing</a>
-      <a href="#infrastructure">Infrastructure</a>
-      <a href="#downtown">Downtown</a>
-      <a href="#safety">Community Safety</a>
+      <a href="#case">The Case</a>
+      <a href="#plan">Plan</a>
+      <a href="#citylab">City Lab</a>
+      <a href="#listen">Listen</a>
       <a href="#events">Events</a>
-      <a class="nav-cta" href="#volunteer">Get involved</a>
+      <a class="nav-cta" href="#volunteer">Join</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero award-hero">
       <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">London, Ontario · The Forks of the Thames</p>
-          <h1>Build the city forward.</h1>
-          <p class="hero-subtitle">Practical leadership for a growing London.</p>
-          <p class="hero-text">Fixing infrastructure. Tackling affordability. Building safer communities. Creating a city that works again.</p>
+      <div class="hero-gradient" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-left reveal">
+          <p class="eyebrow">London, Ontario / 2026</p>
+          <h1><span>A city that</span><br>works again.</h1>
+          <p class="hero-statement">A mayoral campaign built around the unglamorous things that decide quality of life: housing, roads, safety, downtown confidence, and basic city competence.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#vision">Read the plan</a>
+            <a class="button primary" href="#plan">Read the plan</a>
             <a class="button secondary" href="#volunteer">Volunteer</a>
-            <a class="button ghost" href="#donate">Donate</a>
           </div>
         </div>
-        <aside class="candidate-card" aria-label="Candidate statement">
-          <span>John Feher</span>
-          <strong>Experienced. Focused. Ready to lead.</strong>
-          <p>Not louder politics. Better city operations.</p>
-        </aside>
+        <div class="hero-right reveal delay-1">
+          <div class="portrait-panel">
+            <div class="portrait-placeholder">John Feher<br><span>Campaign portrait goes here</span></div>
+          </div>
+          <div class="quote-card">
+            <p>“London does not need louder politics. It needs steadier leadership and better execution.”</p>
+          </div>
+        </div>
+      </div>
+      <div class="ticker" aria-label="Campaign priorities">
+        <span>Housing Affordability</span><span>Infrastructure Discipline</span><span>Downtown Confidence</span><span>Community Safety</span><span>Smarter Growth</span>
       </div>
     </section>
 
-    <section id="vision" class="intro section-pad">
-      <div>
-        <p class="eyebrow dark">The message</p>
-        <h2>London does not need another performance. It needs a better operator.</h2>
-      </div>
-      <p class="lead">A serious mayoral campaign should feel clear, grounded, and trustworthy. This platform is built around the pressures Londoners actually feel every day: housing, traffic, downtown confidence, mental health, public safety, infrastructure, and affordability.</p>
-    </section>
-
-    <section class="metrics section-pad" aria-label="City metrics">
-      <article><strong data-count="5">0</strong><span>Core city problems addressed</span></article>
-      <article><strong data-count="14">0</strong><span>Neighbourhood areas to listen to</span></article>
-      <article><strong data-count="1">0</strong><span>City to serve</span></article>
-    </section>
-
-    <section class="issues section-pad">
-      <div class="section-title">
-        <p class="eyebrow dark">The real issues</p>
-        <h2>Focused on what Londoners can actually feel.</h2>
-      </div>
-      <div class="issue-grid">
-        <article id="housing">
-          <span class="issue-icon">⌂</span>
-          <h3>Housing affordability</h3>
-          <p>Rising rents, family affordability, and smart housing growth that respects neighbourhoods while getting homes built faster.</p>
-        </article>
-        <article id="infrastructure">
-          <span class="issue-icon">⌁</span>
-          <h3>Traffic & infrastructure</h3>
-          <p>Congestion, road repair, construction coordination, transit reliability, and smarter transportation planning.</p>
-        </article>
-        <article id="downtown">
-          <span class="issue-icon">◆</span>
-          <h3>Downtown revitalization</h3>
-          <p>Public safety, business recovery, cleanliness, storefront confidence, and a downtown people want to visit again.</p>
-        </article>
-        <article id="safety">
-          <span class="issue-icon">◉</span>
-          <h3>Mental health & homelessness</h3>
-          <p>Compassionate but practical solutions, community safety, addiction response, and coordinated services that stop passing the problem around.</p>
-        </article>
+    <section id="case" class="manifesto section-pad">
+      <p class="eyebrow dark">The case for change</p>
+      <div class="manifesto-grid">
+        <h2>London is growing. The systems are not keeping up.</h2>
+        <p class="lead">The next mayor has to be more than a symbol. The job is operational: align departments, set priorities, measure progress, communicate clearly, and make the city feel functional again.</p>
       </div>
     </section>
 
-    <section class="city-dashboard section-pad">
-      <div class="section-title light">
-        <p class="eyebrow">Live city metrics</p>
-        <h2>Run the city with facts, not fog.</h2>
+    <section id="plan" class="plan section-pad">
+      <div class="section-title centered">
+        <p class="eyebrow dark">The practical plan</p>
+        <h2>Five pressure points. One disciplined city agenda.</h2>
       </div>
-      <div class="dashboard-grid">
-        <article><span>Average commute</span><strong>Needs tracking</strong><small>Traffic flow + construction coordination</small></article>
-        <article><span>Housing starts</span><strong>Needs acceleration</strong><small>Approvals, density, and affordability</small></article>
-        <article><span>Downtown vacancies</span><strong>Needs focus</strong><small>Business confidence + safety</small></article>
-        <article><span>Infrastructure backlog</span><strong>Needs discipline</strong><small>Roads, bridges, sewers, sidewalks</small></article>
-        <article><span>Transit ridership</span><strong>Needs reliability</strong><small>Frequency, speed, and connection</small></article>
-      </div>
-    </section>
-
-    <section class="map-section section-pad">
-      <div class="map-copy">
-        <p class="eyebrow dark">Interactive city map</p>
-        <h2>A plan that shows up on streets, not just in speeches.</h2>
-        <p class="lead">A modern campaign site should let residents see what is being proposed in their neighbourhood: infrastructure projects, transit improvements, parks, trails, development zones, and community investment areas.</p>
-      </div>
-      <div class="map-card" aria-label="Stylized London Ontario city map">
-        <div class="river river-one"></div>
-        <div class="river river-two"></div>
-        <div class="map-pin pin-one"><span>Downtown</span></div>
-        <div class="map-pin pin-two"><span>Transit</span></div>
-        <div class="map-pin pin-three"><span>Housing</span></div>
-        <div class="map-pin pin-four"><span>Parks</span></div>
-        <div class="map-line"></div>
+      <div class="plan-grid">
+        <article><span>01</span><h3>Build homes faster</h3><p>Speed approvals, support smart density, and focus on housing regular working families can actually afford.</p></article>
+        <article><span>02</span><h3>Fix the daily commute</h3><p>Coordinate construction better, improve major corridors, and treat traffic flow like a quality-of-life issue.</p></article>
+        <article><span>03</span><h3>Restore downtown confidence</h3><p>Make downtown cleaner, safer, more active, and easier for small businesses to believe in again.</p></article>
+        <article><span>04</span><h3>Coordinate crisis response</h3><p>Bring mental health, homelessness, addiction, outreach, enforcement, and housing supports into one accountable operating model.</p></article>
+        <article><span>05</span><h3>Respect the taxpayer</h3><p>Prioritize visible service improvements, publish clear metrics, and stop hiding weak execution behind vague language.</p></article>
       </div>
     </section>
 
-    <section class="film section-pad">
-      <div class="film-card">
-        <p class="eyebrow">Campaign film</p>
-        <h2>London can be run better.</h2>
-        <p>Drone footage. Neighbourhoods. Small businesses. Construction sites. Families. Parks. The Thames River. Downtown streets. Real people. No stock-photo campaign theatre.</p>
-        <button class="play-button" type="button">▶ Watch the campaign film</button>
+    <section id="citylab" class="citylab section-pad">
+      <div class="citylab-copy reveal">
+        <p class="eyebrow">City operations lab</p>
+        <h2>Campaign promises should be measurable.</h2>
+        <p>Residents should be able to see what is improving, what is late, and who is accountable. This is how a serious city earns back trust.</p>
+      </div>
+      <div class="metric-wall reveal delay-1">
+        <article><small>Housing approvals</small><strong>Track monthly</strong></article>
+        <article><small>Road disruption</small><strong>Coordinate visibly</strong></article>
+        <article><small>Downtown vacancies</small><strong>Report honestly</strong></article>
+        <article><small>Transit reliability</small><strong>Measure on-time</strong></article>
       </div>
     </section>
 
-    <section class="community section-pad">
-      <div class="section-title">
+    <section class="map-experience section-pad">
+      <div class="map-shell">
+        <div class="map-river a"></div><div class="map-river b"></div><div class="map-river c"></div>
+        <div class="map-node n1"><b>Downtown</b><span>Clean + safe core</span></div>
+        <div class="map-node n2"><b>East London</b><span>Roads + services</span></div>
+        <div class="map-node n3"><b>South London</b><span>Housing growth</span></div>
+        <div class="map-node n4"><b>North London</b><span>Transit flow</span></div>
+      </div>
+      <div class="map-text">
+        <p class="eyebrow dark">Neighbourhood intelligence</p>
+        <h2>A campaign that can talk street-by-street.</h2>
+        <p class="lead">The website should eventually become a living map of London’s problems and proposed fixes — not just a brochure.</p>
+      </div>
+    </section>
+
+    <section id="listen" class="listen section-pad">
+      <div class="section-title centered">
         <p class="eyebrow dark">Community first</p>
-        <h2>Built around the people who keep London moving.</h2>
+        <h2>The best campaign asset is proof that he listens.</h2>
       </div>
-      <div class="story-grid">
-        <article><span>Small business owners</span><p>Cut red tape, rebuild confidence, and make London easier to invest in.</p></article>
-        <article><span>Healthcare workers</span><p>Advocate for mental health, addiction support, and pressure relief where the city can help.</p></article>
-        <article><span>Tradespeople</span><p>Fix the basics, coordinate projects better, and respect the people building the city.</p></article>
-        <article><span>Students & families</span><p>Build housing, transportation, safety, and opportunity for the next generation.</p></article>
+      <div class="story-rail">
+        <article><span>Small business</span><p>What would make downtown easier to operate in?</p></article>
+        <article><span>Families</span><p>What is making London harder to afford?</p></article>
+        <article><span>First responders</span><p>Where is the system failing on the ground?</p></article>
+        <article><span>Students</span><p>What would make young people stay?</p></article>
       </div>
     </section>
 
     <section id="events" class="events section-pad">
-      <div class="section-title">
-        <p class="eyebrow dark">Events</p>
-        <h2>Show up. Listen. Repeat.</h2>
+      <div>
+        <p class="eyebrow dark">Campaign calendar</p>
+        <h2>Show up. Listen. Publish what was heard.</h2>
       </div>
-      <div class="event-grid">
-        <article><time>June 12</time><h3>Downtown listening walk</h3><p>Public safety, business confidence, and street-level concerns.</p></article>
-        <article><time>June 19</time><h3>Housing roundtable</h3><p>Builders, renters, families, and neighbourhood voices.</p></article>
-        <article><time>June 26</time><h3>Infrastructure town hall</h3><p>Roads, congestion, transit reliability, and construction planning.</p></article>
+      <div class="event-list">
+        <article><time>June 12</time><div><h3>Downtown walk-through</h3><p>Safety, vacancies, cleanliness, business confidence.</p></div></article>
+        <article><time>June 19</time><div><h3>Housing roundtable</h3><p>Renters, builders, families, neighbourhood voices.</p></div></article>
+        <article><time>June 26</time><div><h3>Infrastructure town hall</h3><p>Roads, construction, transit, and growth pressure.</p></div></article>
       </div>
     </section>
 
     <section id="volunteer" class="volunteer section-pad">
-      <div>
-        <p class="eyebrow dark">Get involved</p>
+      <div class="volunteer-card">
+        <p class="eyebrow">Get involved</p>
         <h2>Turn frustration into organized action.</h2>
-        <p class="lead">Use this section for volunteers, lawn signs, events, donations, and email updates. Connect it to Google Sheets, Formspree, Airtable, Mailchimp, or a campaign CRM.</p>
+        <form class="volunteer-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <input type="text" name="name" placeholder="Full name" required>
+          <input type="email" name="email" placeholder="Email address" required>
+          <select name="interest"><option>Volunteer</option><option>Request a lawn sign</option><option>Host an event</option><option>Join updates</option><option>Donate</option></select>
+          <button class="button primary" type="submit">Join the campaign</button>
+        </form>
       </div>
-      <form class="volunteer-form" action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Full name" required>
-        <input type="email" name="email" placeholder="Email address" required>
-        <input type="tel" name="phone" placeholder="Phone number">
-        <select name="interest">
-          <option>Volunteer</option>
-          <option>Request a lawn sign</option>
-          <option>Host an event</option>
-          <option>Join the email list</option>
-          <option>Donate</option>
-        </select>
-        <button class="button primary dark-button" type="submit">Submit</button>
-      </form>
     </section>
   </main>
 
   <footer class="footer">
-    <div><strong>John Feher for Mayor</strong><p>London, Ontario</p></div>
-    <p>Authorized by the CFO for the John Feher for Mayor Campaign. Replace with final approved authorization before launch.</p>
+    <strong>John Feher for Mayor</strong>
+    <p>Authorized by the CFO for the John Feher for Mayor Campaign. Replace before launch.</p>
   </footer>
 
   <script src="script.js"></script>
