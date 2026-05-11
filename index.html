@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Feher for Mayor | London, Ontario</title>
-  <meta name="description" content="John Feher for Mayor — a modern campaign website for London, Ontario." />
+  <meta name="description" content="John Feher for Mayor — practical leadership for a growing London, Ontario." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,115 +13,157 @@
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="John Feher for Mayor home">
-      <span class="brand-mark">JF</span>
-      <span><strong>John Feher</strong><small>For Mayor</small></span>
+      <span class="brand-name"><strong>John Feher</strong><small>For Mayor</small></span>
     </a>
+    <button class="menu-toggle" aria-label="Open menu">Menu</button>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#priorities">Priorities</a>
-      <a href="#about">About</a>
-      <a href="#neighbourhoods">Neighbourhoods</a>
-      <a href="#news">News</a>
+      <a href="#vision">Vision</a>
+      <a href="#housing">Housing</a>
+      <a href="#infrastructure">Infrastructure</a>
+      <a href="#downtown">Downtown</a>
+      <a href="#safety">Community Safety</a>
+      <a href="#events">Events</a>
       <a class="nav-cta" href="#volunteer">Get involved</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-media" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow">London, Ontario · The Forest City</p>
-        <h1>Practical leadership for a stronger London.</h1>
-        <p>John Feher is running for Mayor to bring focus, accountability, and common sense back to City Hall — with a campaign built around real neighbourhoods, real people, and real results.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#volunteer">Join the campaign</a>
-          <a class="button secondary" href="#priorities">View priorities</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">London, Ontario · The Forks of the Thames</p>
+          <h1>Build the city forward.</h1>
+          <p class="hero-subtitle">Practical leadership for a growing London.</p>
+          <p class="hero-text">Fixing infrastructure. Tackling affordability. Building safer communities. Creating a city that works again.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#vision">Read the plan</a>
+            <a class="button secondary" href="#volunteer">Volunteer</a>
+            <a class="button ghost" href="#donate">Donate</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-card">
-        <span>Campaign theme</span>
-        <strong>Rooted in London. Focused on results.</strong>
+        <aside class="candidate-card" aria-label="Candidate statement">
+          <span>John Feher</span>
+          <strong>Experienced. Focused. Ready to lead.</strong>
+          <p>Not louder politics. Better city operations.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="intro section-pad">
+    <section id="vision" class="intro section-pad">
       <div>
         <p class="eyebrow dark">The message</p>
-        <h2>London does not need a louder mayor. It needs a better operator.</h2>
+        <h2>London does not need another performance. It needs a better operator.</h2>
       </div>
-      <p class="lead">A serious mayoral campaign should feel clear, grounded, and trustworthy. This site is built to communicate exactly that: John Feher is focused on the basics Londoners actually feel every day.</p>
+      <p class="lead">A serious mayoral campaign should feel clear, grounded, and trustworthy. This platform is built around the pressures Londoners actually feel every day: housing, traffic, downtown confidence, mental health, public safety, infrastructure, and affordability.</p>
     </section>
 
-    <section class="metrics section-pad" aria-label="Campaign focus metrics">
-      <article><strong>11</strong><span>Wards to listen to</span></article>
-      <article><strong>4</strong><span>Core priorities</span></article>
-      <article><strong>1</strong><span>City to serve</span></article>
+    <section class="metrics section-pad" aria-label="City metrics">
+      <article><strong data-count="5">0</strong><span>Core city problems addressed</span></article>
+      <article><strong data-count="14">0</strong><span>Neighbourhood areas to listen to</span></article>
+      <article><strong data-count="1">0</strong><span>City to serve</span></article>
     </section>
 
-    <section id="priorities" class="priorities section-pad">
+    <section class="issues section-pad">
       <div class="section-title">
-        <p class="eyebrow dark">Priorities</p>
-        <h2>A campaign built around the basics.</h2>
+        <p class="eyebrow dark">The real issues</p>
+        <h2>Focused on what Londoners can actually feel.</h2>
       </div>
-      <div class="priority-list">
-        <article>
-          <span>01</span>
-          <h3>Housing that moves faster</h3>
-          <p>Reduce delay, support responsible growth, and make it easier to build homes people can afford.</p>
+      <div class="issue-grid">
+        <article id="housing">
+          <span class="issue-icon">⌂</span>
+          <h3>Housing affordability</h3>
+          <p>Rising rents, family affordability, and smart housing growth that respects neighbourhoods while getting homes built faster.</p>
         </article>
-        <article>
-          <span>02</span>
-          <h3>Affordability and accountability</h3>
-          <p>Respect taxpayers and focus city spending on services residents can actually see and feel.</p>
+        <article id="infrastructure">
+          <span class="issue-icon">⌁</span>
+          <h3>Traffic & infrastructure</h3>
+          <p>Congestion, road repair, construction coordination, transit reliability, and smarter transportation planning.</p>
         </article>
-        <article>
-          <span>03</span>
-          <h3>Safer neighbourhoods</h3>
-          <p>Coordinate practical safety, outreach, enforcement, and public-space standards across the city.</p>
+        <article id="downtown">
+          <span class="issue-icon">◆</span>
+          <h3>Downtown revitalization</h3>
+          <p>Public safety, business recovery, cleanliness, storefront confidence, and a downtown people want to visit again.</p>
         </article>
-        <article>
-          <span>04</span>
-          <h3>Roads, transit, and service basics</h3>
-          <p>Make the daily experience of living in London smoother, cleaner, safer, and more reliable.</p>
+        <article id="safety">
+          <span class="issue-icon">◉</span>
+          <h3>Mental health & homelessness</h3>
+          <p>Compassionate but practical solutions, community safety, addiction response, and coordinated services that stop passing the problem around.</p>
         </article>
-      </div>
-    </section>
-
-    <section id="about" class="about section-pad">
-      <div class="photo-block">
-        <div class="photo-placeholder">Add John’s real campaign photo here</div>
-      </div>
-      <div class="about-copy">
-        <p class="eyebrow dark">About John</p>
-        <h2>Rooted here. Ready to do the work.</h2>
-        <p>This section needs John’s real story. Not generic political filler. Where he is from, what he has built, what he believes, and why he is the right person for this moment in London.</p>
-        <p>The strongest campaign story is specific. Voters need to feel that John understands the city because he has lived the same pressures they have.</p>
-        <a href="#volunteer" class="text-link">Help build the campaign →</a>
       </div>
     </section>
 
-    <section id="neighbourhoods" class="neighbourhoods section-pad">
+    <section class="city-dashboard section-pad">
       <div class="section-title light">
-        <p class="eyebrow">Neighbourhoods</p>
-        <h2>London is not one place. It is many communities.</h2>
+        <p class="eyebrow">Live city metrics</p>
+        <h2>Run the city with facts, not fog.</h2>
       </div>
-      <div class="neighbourhood-grid">
-        <button data-area="Downtown" class="area active">Downtown</button>
-        <button data-area="Byron" class="area">Byron</button>
-        <button data-area="Argyle" class="area">Argyle</button>
-        <button data-area="White Oaks" class="area">White Oaks</button>
-        <button data-area="Wortley" class="area">Wortley</button>
+      <div class="dashboard-grid">
+        <article><span>Average commute</span><strong>Needs tracking</strong><small>Traffic flow + construction coordination</small></article>
+        <article><span>Housing starts</span><strong>Needs acceleration</strong><small>Approvals, density, and affordability</small></article>
+        <article><span>Downtown vacancies</span><strong>Needs focus</strong><small>Business confidence + safety</small></article>
+        <article><span>Infrastructure backlog</span><strong>Needs discipline</strong><small>Roads, bridges, sewers, sidewalks</small></article>
+        <article><span>Transit ridership</span><strong>Needs reliability</strong><small>Frequency, speed, and connection</small></article>
       </div>
-      <div class="area-card">
-        <h3 id="areaTitle">Downtown</h3>
-        <p id="areaText">A stronger downtown needs safety, cleanliness, housing, business confidence, and visible leadership.</p>
+    </section>
+
+    <section class="map-section section-pad">
+      <div class="map-copy">
+        <p class="eyebrow dark">Interactive city map</p>
+        <h2>A plan that shows up on streets, not just in speeches.</h2>
+        <p class="lead">A modern campaign site should let residents see what is being proposed in their neighbourhood: infrastructure projects, transit improvements, parks, trails, development zones, and community investment areas.</p>
+      </div>
+      <div class="map-card" aria-label="Stylized London Ontario city map">
+        <div class="river river-one"></div>
+        <div class="river river-two"></div>
+        <div class="map-pin pin-one"><span>Downtown</span></div>
+        <div class="map-pin pin-two"><span>Transit</span></div>
+        <div class="map-pin pin-three"><span>Housing</span></div>
+        <div class="map-pin pin-four"><span>Parks</span></div>
+        <div class="map-line"></div>
+      </div>
+    </section>
+
+    <section class="film section-pad">
+      <div class="film-card">
+        <p class="eyebrow">Campaign film</p>
+        <h2>London can be run better.</h2>
+        <p>Drone footage. Neighbourhoods. Small businesses. Construction sites. Families. Parks. The Thames River. Downtown streets. Real people. No stock-photo campaign theatre.</p>
+        <button class="play-button" type="button">▶ Watch the campaign film</button>
+      </div>
+    </section>
+
+    <section class="community section-pad">
+      <div class="section-title">
+        <p class="eyebrow dark">Community first</p>
+        <h2>Built around the people who keep London moving.</h2>
+      </div>
+      <div class="story-grid">
+        <article><span>Small business owners</span><p>Cut red tape, rebuild confidence, and make London easier to invest in.</p></article>
+        <article><span>Healthcare workers</span><p>Advocate for mental health, addiction support, and pressure relief where the city can help.</p></article>
+        <article><span>Tradespeople</span><p>Fix the basics, coordinate projects better, and respect the people building the city.</p></article>
+        <article><span>Students & families</span><p>Build housing, transportation, safety, and opportunity for the next generation.</p></article>
+      </div>
+    </section>
+
+    <section id="events" class="events section-pad">
+      <div class="section-title">
+        <p class="eyebrow dark">Events</p>
+        <h2>Show up. Listen. Repeat.</h2>
+      </div>
+      <div class="event-grid">
+        <article><time>June 12</time><h3>Downtown listening walk</h3><p>Public safety, business confidence, and street-level concerns.</p></article>
+        <article><time>June 19</time><h3>Housing roundtable</h3><p>Builders, renters, families, and neighbourhood voices.</p></article>
+        <article><time>June 26</time><h3>Infrastructure town hall</h3><p>Roads, congestion, transit reliability, and construction planning.</p></article>
       </div>
     </section>
 
     <section id="volunteer" class="volunteer section-pad">
       <div>
         <p class="eyebrow dark">Get involved</p>
-        <h2>Turn support into action.</h2>
-        <p class="lead">Use this form for volunteers, lawn signs, event hosts, and email updates. Connect it to Formspree, Google Sheets, Airtable, Mailchimp, or a campaign CRM.</p>
+        <h2>Turn frustration into organized action.</h2>
+        <p class="lead">Use this section for volunteers, lawn signs, events, donations, and email updates. Connect it to Google Sheets, Formspree, Airtable, Mailchimp, or a campaign CRM.</p>
       </div>
       <form class="volunteer-form" action="https://formspree.io/f/your-form-id" method="POST">
         <input type="text" name="name" placeholder="Full name" required>
@@ -137,22 +179,10 @@
         <button class="button primary dark-button" type="submit">Submit</button>
       </form>
     </section>
-
-    <section id="news" class="news section-pad">
-      <div class="section-title">
-        <p class="eyebrow dark">Newsroom</p>
-        <h2>Campaign updates.</h2>
-      </div>
-      <div class="news-grid">
-        <article><span>Announcement</span><h3>John Feher launches campaign for Mayor of London</h3><p>Use this for the official campaign launch statement.</p></article>
-        <article><span>Policy</span><h3>A practical plan for neighbourhood safety</h3><p>Short, sharp updates will outperform giant policy PDFs.</p></article>
-        <article><span>Community</span><h3>Listening tour across the Forest City</h3><p>Show voters where John is showing up and what he is hearing.</p></article>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
-    <div><strong>John Feher for Mayor</strong><p>London, Ontario · The Forest City</p></div>
+    <div><strong>John Feher for Mayor</strong><p>London, Ontario</p></div>
     <p>Authorized by the CFO for the John Feher for Mayor Campaign. Replace with final approved authorization before launch.</p>
   </footer>
 
