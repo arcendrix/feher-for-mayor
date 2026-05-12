@@ -21,8 +21,12 @@ body { background: var(--off); }
 .priority-strip { background: linear-gradient(90deg, #020202, #120405 55%, #26090b); }
 .priority-strip article { border-right-color: rgba(217, 161, 41, 0.32); }
 .plan-section { padding-top: 4.6rem; padding-bottom: 5.2rem; }
+.plan-intro-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.68fr); gap: 2.5rem; align-items: end; margin-bottom: 2rem; }
 .plan-section .section-heading { max-width: 980px; }
 .plan-section .section-heading h2 { font-size: clamp(3.4rem, 5.8vw, 6.2rem); line-height: 0.9; letter-spacing: -0.035em; max-width: 920px; }
+.plan-photo { margin: 0; aspect-ratio: 4 / 3; border-radius: 18px; position: relative; }
+.plan-photo:after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.62)); pointer-events: none; }
+.plan-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; background: transparent; color: rgba(255,255,255,0.9); font-weight: 800; }
 .plan-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.15rem; align-items: stretch; }
 .plan-grid article { min-height: 365px; padding: 1.35rem 1.15rem 1.45rem; display: grid; grid-template-rows: auto auto minmax(72px, auto) 1fr; gap: 0.72rem; }
 .plan-grid article:before { background: linear-gradient(90deg, var(--gold), var(--red)); }
@@ -85,12 +89,15 @@ body { background: var(--off); }
 }
 
 @media (max-width: 1180px) and (min-width: 901px) {
+  .plan-intro-grid { grid-template-columns: 1fr; align-items: start; }
+  .plan-photo { max-width: 760px; }
   .plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .plan-grid article { min-height: 315px; }
 }
 
 @media (max-width: 900px) {
   .hero:before { background: linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.8)), linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95)), url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat; }
+  .plan-intro-grid { grid-template-columns: 1fr; gap: 1.4rem; }
   .plan-section .section-heading h2 { font-size: clamp(3rem, 10.5vw, 4.7rem); }
   .plan-grid { grid-template-columns: 1fr; gap: 1rem; }
   .plan-grid article { min-height: auto; padding: 1.35rem; grid-template-rows: auto auto auto auto; }
@@ -108,6 +115,7 @@ body { background: var(--off); }
 @media (max-width: 520px) {
   .plan-section { padding-top: 3.2rem; padding-bottom: 3.5rem; }
   .plan-section .section-heading h2 { font-size: 3.05rem; line-height: 0.92; }
+  .plan-photo { aspect-ratio: 1 / 1; }
   .bank-link-grid { grid-template-columns: 1fr; }
   .bank-link-panel { padding: 1rem; }
   .campaign-photo { border-radius: 16px; }
