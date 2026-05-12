@@ -20,7 +20,15 @@ body { background: var(--off); }
 .hero h1 em { background: linear-gradient(180deg, #ffd76a, #c9881d); -webkit-background-clip: text; background-clip: text; }
 .priority-strip { background: linear-gradient(90deg, #020202, #120405 55%, #26090b); }
 .priority-strip article { border-right-color: rgba(217, 161, 41, 0.32); }
+.plan-section { padding-top: 4.6rem; padding-bottom: 5.2rem; }
+.plan-section .section-heading { max-width: 980px; }
+.plan-section .section-heading h2 { font-size: clamp(3.4rem, 5.8vw, 6.2rem); line-height: 0.9; letter-spacing: -0.035em; max-width: 920px; }
+.plan-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.15rem; align-items: stretch; }
+.plan-grid article { min-height: 365px; padding: 1.35rem 1.15rem 1.45rem; display: grid; grid-template-rows: auto auto minmax(72px, auto) 1fr; gap: 0.72rem; }
 .plan-grid article:before { background: linear-gradient(90deg, var(--gold), var(--red)); }
+.plan-grid span { font-size: 0.9rem; letter-spacing: 0.14rem; }
+.plan-grid h3 { margin: 0; font-size: clamp(1.2rem, 1.45vw, 1.52rem); line-height: 1.03; letter-spacing: -0.02em; }
+.plan-grid p { margin: 0; font-size: 0.98rem; line-height: 1.58; color: #4d5661; }
 .plan-icon { width: 58px; height: 58px; background: rgba(217, 161, 41, 0.1); border-color: rgba(217, 161, 41, 0.42); color: var(--gold); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); }
 .plan-icon svg { width: 28px; height: 28px; display: block; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .section-grid h2,.section-heading h2,.proof-section h2,.donate-copy h2,.volunteer-section h2,.plan-grid h3,.event-row strong,.updates-grid h3,.photo-story-section h2 { color: #0d0d0d; }
@@ -64,8 +72,17 @@ body { background: var(--off); }
   .hero-content { position: relative; z-index: 3; max-width: 62%; }
 }
 
+@media (max-width: 1180px) and (min-width: 901px) {
+  .plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .plan-grid article { min-height: 315px; }
+}
+
 @media (max-width: 900px) {
   .hero:before { background: linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.8)), linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95)), url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat; }
+  .plan-section .section-heading h2 { font-size: clamp(3rem, 10.5vw, 4.7rem); }
+  .plan-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .plan-grid article { min-height: auto; padding: 1.35rem; grid-template-rows: auto auto auto auto; }
+  .plan-grid h3 { min-height: 0; font-size: 1.45rem; }
   .plan-icon { width: 54px; height: 54px; }
   .plan-icon svg { width: 26px; height: 26px; }
   .donation-requirements { grid-template-columns: 1fr; }
@@ -75,6 +92,8 @@ body { background: var(--off); }
 }
 
 @media (max-width: 520px) {
+  .plan-section { padding-top: 3.2rem; padding-bottom: 3.5rem; }
+  .plan-section .section-heading h2 { font-size: 3.05rem; line-height: 0.92; }
   .bank-link-grid { grid-template-columns: 1fr; }
   .bank-link-panel { padding: 1rem; }
   .campaign-photo { border-radius: 16px; }
