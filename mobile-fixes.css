@@ -5,35 +5,51 @@
   .mobile-hide { display: none !important; }
 
   .topbar {
-    padding: 1.15rem 4vw 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 2.25rem 4vw 0;
     align-items: flex-start;
+    background: transparent;
   }
 
   .brand strong {
-    font-size: 2.15rem;
-    line-height: 0.84;
+    font-size: clamp(2.8rem, 11vw, 4rem);
+    line-height: 0.8;
+    letter-spacing: -0.06em;
   }
 
   .brand span {
-    font-size: 0.68rem;
-    letter-spacing: 0.2rem;
+    display: block;
+    margin-top: 0.42rem;
+    font-size: clamp(0.82rem, 3.1vw, 1.08rem);
+    letter-spacing: 0.32em;
     text-align: left;
   }
 
   .menu-toggle {
-    padding: 0.72rem 1rem;
-    font-size: 0.98rem;
-    background: rgba(3, 24, 43, 0.64);
+    min-width: 8.4rem;
+    min-height: 4.35rem;
+    padding: 0.95rem 1.35rem;
+    border-radius: 0.48rem;
+    border: 2px solid var(--gold2);
+    font-size: clamp(1.35rem, 4.8vw, 1.75rem);
+    font-weight: 900;
+    background: rgba(3, 24, 43, 0.72);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.28);
   }
 
   .mobile-hero {
     position: relative;
     display: block;
-    min-height: 100dvh;
+    min-height: 100svh;
     overflow: hidden;
-    padding: 8.85rem 4vw 7.4rem;
+    padding: 0 4vw;
     background: #020202;
     color: #fff;
+    isolation: isolate;
   }
 
   .mobile-hero:before {
@@ -41,20 +57,18 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.76)),
-      linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.72) 72%, rgba(0,0,0,0.82)),
+      linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.78) 54%, rgba(0,0,0,0.62) 100%),
+      linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.48) 58%, rgba(0,0,0,0.93) 100%),
       url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
-    z-index: 0;
+    z-index: -4;
   }
 
   .mobile-hero:after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 9rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    inset: auto 0 0;
+    height: 13rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.86) 62%, #020202 100%);
     z-index: 1;
     pointer-events: none;
   }
@@ -63,23 +77,25 @@
     position: relative;
     z-index: 4;
     max-width: 100%;
+    padding-top: clamp(17.3rem, 32svh, 19.4rem);
   }
 
   .mobile-kicker {
     color: var(--gold2);
-    font-size: 0.72rem;
+    font-size: clamp(1.05rem, 4vw, 1.35rem);
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.22rem;
-    margin-bottom: 0.95rem;
+    letter-spacing: 0.36em;
+    margin: 0 0 1.85rem;
   }
 
   .mobile-hero h1 {
+    margin: 0;
     font-family: var(--cond);
-    font-size: clamp(2.58rem, 10.8vw, 3.48rem);
-    line-height: 0.94;
+    font-size: clamp(3.7rem, 13.5vw, 5rem);
+    line-height: 0.96;
     text-transform: uppercase;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.048em;
     color: #fff;
     text-shadow: 0 5px 18px rgba(0,0,0,0.42);
   }
@@ -99,44 +115,45 @@
   }
 
   .mobile-hero-copy p:not(.mobile-kicker) {
-    margin-top: 1rem;
-    max-width: 84%;
+    margin: 1.55rem 0 0;
+    max-width: 86%;
     color: #fff;
-    font-size: 0.84rem;
-    line-height: 1.42;
-    font-weight: 750;
+    font-size: clamp(1.25rem, 4.6vw, 1.58rem);
+    line-height: 1.34;
+    font-weight: 800;
     text-shadow: 0 3px 12px rgba(0,0,0,0.45);
   }
 
   .mobile-hero-person {
     position: absolute;
     z-index: 2;
-    right: 11vw;
-    bottom: 5.25rem;
-    width: 96vw;
-    height: 50dvh;
+    right: -31vw;
+    bottom: 7.25rem;
+    width: 83vw;
+    height: 47svh;
     background: url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/john-hero.png') right bottom / contain no-repeat;
     pointer-events: none;
-    filter: drop-shadow(0 18px 30px rgba(0,0,0,0.5));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.72) 86%, rgba(0,0,0,0.16) 97%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.72) 86%, rgba(0,0,0,0.16) 97%, rgba(0,0,0,0) 100%);
+    filter: drop-shadow(-16px 12px 34px rgba(0,0,0,0.7));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 78%, rgba(0,0,0,0.68) 91%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 78%, rgba(0,0,0,0.68) 91%, rgba(0,0,0,0) 100%);
   }
 
   .mobile-hero-actions {
     position: absolute;
-    z-index: 6;
+    z-index: 8;
     left: 4vw;
-    right: 18vw;
-    bottom: 3.25rem;
+    right: 4vw;
+    bottom: 3.15rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.76rem;
+    gap: 1.35rem;
   }
 
   .mobile-hero-actions .button {
-    min-height: 2.95rem;
-    font-size: 0.72rem;
-    padding: 0.7rem 0.5rem;
+    min-height: 5.75rem;
+    border-radius: 0.48rem;
+    font-size: clamp(1.05rem, 4.1vw, 1.35rem);
+    padding: 1rem 0.7rem;
     white-space: nowrap;
   }
 
@@ -146,70 +163,136 @@
 }
 
 @media (max-width: 520px) {
-  .mobile-hero {
-    padding-top: 8.65rem;
-    padding-bottom: 7.2rem;
+  .topbar { padding-top: 2.05rem; }
+
+  .mobile-hero-copy {
+    padding-top: clamp(16.9rem, 32svh, 18.8rem);
   }
 
   .mobile-hero h1 {
-    font-size: clamp(2.32rem, 10.2vw, 3.08rem);
-    line-height: 0.96;
+    font-size: clamp(3.35rem, 12.7vw, 4.35rem);
   }
 
   .mobile-hero-copy p:not(.mobile-kicker) {
-    max-width: 83%;
-    font-size: 0.8rem;
+    max-width: 84%;
   }
 
   .mobile-hero-person {
-    right: 8vw;
-    bottom: 4.95rem;
-    width: 100vw;
-    height: 48dvh;
+    right: -32vw;
+    bottom: 7.1rem;
+    width: 86vw;
+    height: 45svh;
   }
 
   .mobile-hero-actions {
-    right: 14vw;
-    bottom: 3rem;
-    gap: 0.66rem;
+    bottom: 2.85rem;
+    gap: 1.1rem;
   }
 
   .mobile-hero-actions .button {
-    min-height: 2.82rem;
-    font-size: 0.68rem;
+    min-height: 5.45rem;
   }
 }
 
 @media (max-width: 390px) {
-  .mobile-hero {
-    padding-top: 8.45rem;
-    padding-bottom: 6.9rem;
+  .topbar { padding-top: 1.85rem; }
+
+  .brand strong {
+    font-size: 2.55rem;
+  }
+
+  .brand span {
+    font-size: 0.72rem;
+  }
+
+  .menu-toggle {
+    min-width: 7.1rem;
+    min-height: 3.7rem;
+    font-size: 1.16rem;
+  }
+
+  .mobile-hero-copy {
+    padding-top: 15.8rem;
+  }
+
+  .mobile-kicker {
+    font-size: 0.92rem;
+    margin-bottom: 1.45rem;
   }
 
   .mobile-hero h1 {
-    font-size: 2.2rem;
+    font-size: 3.05rem;
   }
 
   .mobile-hero-copy p:not(.mobile-kicker) {
     max-width: 82%;
-    font-size: 0.76rem;
+    font-size: 1.08rem;
   }
 
   .mobile-hero-person {
-    right: 4vw;
-    bottom: 4.65rem;
-    width: 106vw;
-    height: 46dvh;
+    right: -34vw;
+    bottom: 6.6rem;
+    width: 88vw;
+    height: 42svh;
   }
 
   .mobile-hero-actions {
-    right: 10vw;
-    bottom: 2.8rem;
-    gap: 0.56rem;
+    bottom: 2.45rem;
+    gap: 0.9rem;
   }
 
   .mobile-hero-actions .button {
-    min-height: 2.66rem;
-    font-size: 0.64rem;
+    min-height: 4.85rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) and (max-height: 760px) {
+  .topbar { padding-top: 1.55rem; }
+
+  .brand strong { font-size: 2.55rem; }
+  .brand span { font-size: 0.72rem; }
+
+  .menu-toggle {
+    min-height: 3.55rem;
+    min-width: 7.2rem;
+    font-size: 1.08rem;
+  }
+
+  .mobile-hero-copy {
+    padding-top: 13.5rem;
+  }
+
+  .mobile-kicker {
+    margin-bottom: 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .mobile-hero h1 {
+    font-size: clamp(2.85rem, 11.6vw, 3.65rem);
+    line-height: 0.94;
+  }
+
+  .mobile-hero-copy p:not(.mobile-kicker) {
+    margin-top: 0.95rem;
+    max-width: 78%;
+    font-size: 1rem;
+  }
+
+  .mobile-hero-person {
+    right: -30vw;
+    bottom: 5.8rem;
+    width: 75vw;
+    height: 39svh;
+  }
+
+  .mobile-hero-actions {
+    bottom: 1.75rem;
+    gap: 0.9rem;
+  }
+
+  .mobile-hero-actions .button {
+    min-height: 4.1rem;
+    font-size: 0.95rem;
   }
 }
