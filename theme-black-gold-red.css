@@ -1,0 +1,129 @@
+:root {
+  --navy: #090909;
+  --navy2: #020202;
+  --gold: #d9a129;
+  --gold2: #f4c85a;
+  --red: #b51f24;
+  --off: #f5f0e7;
+  --ink: #151515;
+}
+
+body {
+  background: var(--off);
+}
+
+.topbar {
+  color: #fff;
+}
+
+.brand span,
+.kicker,
+.section-label,
+.icon,
+.plan-grid span,
+.updates-grid span {
+  color: var(--gold2);
+}
+
+.donate-link,
+.menu-toggle,
+.button.secondary {
+  border-color: var(--gold);
+}
+
+.button.primary {
+  background: linear-gradient(135deg, var(--gold2), var(--gold));
+  border-color: var(--gold);
+  color: #080808;
+}
+
+.button.secondary {
+  background: rgba(0, 0, 0, 0.36);
+  color: #fff;
+}
+
+.hero {
+  background: #020202;
+}
+
+.hero:before {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.78) 42%, rgba(0,0,0,0.32) 76%),
+    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.92)),
+    url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
+}
+
+.hero:after {
+  background: linear-gradient(180deg, transparent, #020202);
+}
+
+.hero h1 em {
+  background: linear-gradient(180deg, #ffd76a, #c9881d);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.priority-strip {
+  background: linear-gradient(90deg, #020202, #120405 55%, #26090b);
+}
+
+.priority-strip article {
+  border-right-color: rgba(217, 161, 41, 0.32);
+}
+
+.plan-grid article:before {
+  background: linear-gradient(90deg, var(--gold), var(--red));
+}
+
+.plan-icon {
+  background: rgba(217, 161, 41, 0.14);
+  border-color: rgba(217, 161, 41, 0.45);
+  color: var(--gold);
+}
+
+.section-grid h2,
+.section-heading h2,
+.proof-section h2,
+.donate-copy h2,
+.volunteer-section h2,
+.plan-grid h3,
+.event-row strong,
+.updates-grid h3 {
+  color: #0d0d0d;
+}
+
+.proof-section,
+.volunteer-section,
+.donate-box {
+  background: linear-gradient(135deg, #050505, #190507 78%, #2b090c);
+}
+
+.proof-section h2,
+.volunteer-section h2 {
+  color: #fff;
+}
+
+.legal-note {
+  border-left-color: var(--red);
+}
+
+.donate-section {
+  background: #f0eadf;
+}
+
+.scorecard strong {
+  color: var(--red);
+}
+
+.footer {
+  background: #050505;
+}
+
+@media (max-width: 900px) {
+  .hero:before {
+    background:
+      linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.8)),
+      linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95)),
+      url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
+  }
+}
