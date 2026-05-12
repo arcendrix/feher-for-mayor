@@ -74,7 +74,7 @@
     gap: 0.72rem;
     position: relative;
     z-index: 4;
-    width: 46%;
+    width: 42%;
     margin-top: 1.35rem;
   }
 
@@ -88,10 +88,10 @@
     position: absolute !important;
     display: block !important;
     z-index: 2;
-    right: -9vw !important;
-    bottom: 1.6rem !important;
-    width: 82vw;
-    height: 48vh;
+    right: -8vw !important;
+    bottom: 11.5rem !important;
+    width: 84vw;
+    height: 56vh;
     margin: 0 !important;
     opacity: 1;
     background-position: center bottom;
@@ -112,48 +112,49 @@
   }
 
   .hero h1 {
-    font-size: clamp(2.95rem, 12.4vw, 3.95rem);
+    font-size: clamp(2.95rem, 12.2vw, 3.95rem);
     line-height: 0.9;
   }
 
   .lead {
     font-size: 0.9rem;
-    max-width: 88%;
+    max-width: 86%;
   }
 
   .hero-actions {
-    width: 45%;
+    width: 41%;
   }
 
   .hero-actions .button {
-    min-height: 3.2rem;
-    font-size: 0.84rem;
+    min-height: 3.15rem;
+    font-size: 0.82rem;
   }
 
   .hero-person {
-    right: -13vw !important;
-    bottom: 1.45rem !important;
+    right: -10vw !important;
+    bottom: 10.75rem !important;
     width: 88vw;
-    height: 45vh;
+    height: 52vh;
   }
 }
 
 @media (max-width: 390px) {
   .hero h1 {
-    font-size: 2.75rem;
+    font-size: 2.7rem;
   }
 
   .lead {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
   }
 
   .hero-actions {
-    width: 44%;
+    width: 40%;
   }
 
   .hero-person {
-    right: -16vw !important;
+    right: -12vw !important;
+    bottom: 10.25rem !important;
     width: 92vw;
-    height: 43vh;
+    height: 49vh;
   }
 }
