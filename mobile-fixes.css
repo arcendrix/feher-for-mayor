@@ -92,7 +92,7 @@
     display: block !important;
     z-index: 2;
     right: -8vw !important;
-    bottom: 13.25rem !important;
+    bottom: 11.8rem !important;
     width: 82vw;
     height: 54vh;
     margin: 0 !important;
@@ -146,7 +146,7 @@
 
   .hero-person {
     right: -11vw !important;
-    bottom: 12.7rem !important;
+    bottom: 11.2rem !important;
     width: 84vw;
     height: 49vh;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0.62) 83%, rgba(0,0,0,0.12) 94%, rgba(0,0,0,0) 100%);
@@ -180,7 +180,7 @@
 
   .hero-person {
     right: -13vw !important;
-    bottom: 12.35rem !important;
+    bottom: 10.9rem !important;
     width: 88vw;
     height: 46vh;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(0,0,0,0.58) 82%, rgba(0,0,0,0.1) 94%, rgba(0,0,0,0) 100%);
