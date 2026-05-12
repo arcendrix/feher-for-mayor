@@ -70,18 +70,21 @@
 
   .hero-actions {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.72rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
     position: relative;
     z-index: 4;
-    width: 42%;
+    width: 72%;
+    max-width: 430px;
     margin-top: 1.35rem;
   }
 
   .hero-actions .button {
     min-height: 3.35rem;
-    font-size: 0.9rem;
-    padding: 0.82rem 0.8rem;
+    font-size: 0.88rem;
+    padding: 0.82rem 0.65rem;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .hero-person {
@@ -127,12 +130,14 @@
   }
 
   .hero-actions {
-    width: 41%;
+    width: 76%;
+    gap: 0.62rem;
   }
 
   .hero-actions .button {
-    min-height: 3.15rem;
-    font-size: 0.82rem;
+    min-height: 3.08rem;
+    font-size: 0.78rem;
+    padding: 0.78rem 0.5rem;
   }
 
   .hero-person {
@@ -155,7 +160,13 @@
   }
 
   .hero-actions {
-    width: 40%;
+    width: 78%;
+    gap: 0.55rem;
+  }
+
+  .hero-actions .button {
+    min-height: 2.95rem;
+    font-size: 0.74rem;
   }
 
   .hero-person {
