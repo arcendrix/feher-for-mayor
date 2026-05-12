@@ -27,20 +27,21 @@
 
   .hero {
     display: block;
-    min-height: auto;
-    padding: 10.4rem 4vw 0;
+    position: relative;
+    min-height: 100svh;
+    padding: 10.2rem 4vw 3.4rem;
     align-items: flex-start;
   }
 
   .hero:before {
     background:
-      linear-gradient(90deg, rgba(3, 19, 35, 0.96), rgba(3, 19, 35, 0.76)),
-      linear-gradient(180deg, rgba(3, 19, 35, 0.14), rgba(3, 19, 35, 0.95)),
+      linear-gradient(90deg, rgba(3, 19, 35, 0.96), rgba(3, 19, 35, 0.78)),
+      linear-gradient(180deg, rgba(3, 19, 35, 0.12), rgba(3, 19, 35, 0.96)),
       url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
   }
 
   .hero:after {
-    height: 46%;
+    height: 42%;
   }
 
   .hero-content {
@@ -52,50 +53,51 @@
   .kicker {
     font-size: 0.8rem;
     letter-spacing: 0.24rem;
-    margin-bottom: 1.05rem;
+    margin-bottom: 1rem;
   }
 
   .hero h1 {
-    font-size: clamp(4rem, 16vw, 6.1rem);
+    font-size: clamp(3.85rem, 15.6vw, 5.8rem);
     line-height: 0.82;
     max-width: 100%;
   }
 
   .lead {
-    margin-top: 1.25rem;
+    margin-top: 1.2rem;
     max-width: 100%;
-    font-size: 1.12rem;
+    font-size: 1.08rem;
     line-height: 1.48;
   }
 
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.85rem;
+    gap: 0.8rem;
     position: relative;
     z-index: 4;
-    margin-top: 1.65rem;
+    width: 58%;
+    margin-top: 1.55rem;
   }
 
   .hero-actions .button {
-    min-height: 4rem;
-    font-size: 1.05rem;
+    min-height: 3.8rem;
+    font-size: 1rem;
   }
 
   .hero-person {
-    position: relative !important;
+    position: absolute !important;
     display: block !important;
-    right: auto !important;
-    bottom: auto !important;
     z-index: 2;
-    width: 100%;
-    height: 360px;
-    margin: 1.25rem auto 0;
-    opacity: 1;
+    right: -11vw !important;
+    bottom: 2.7rem !important;
+    width: 58vw;
+    height: 34vh;
+    margin: 0 !important;
+    opacity: 0.95;
     background-position: center bottom;
     background-size: contain;
     pointer-events: none;
-    filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.48));
+    filter: drop-shadow(0 20px 34px rgba(0, 0, 0, 0.5));
   }
 
   .priority-strip {
@@ -106,33 +108,46 @@
 @media (max-width: 520px) {
   .hero {
     padding-top: 10rem;
+    padding-bottom: 3rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.55rem, 15.5vw, 4.45rem);
+    font-size: clamp(3.45rem, 15.1vw, 4.35rem);
   }
 
   .lead {
-    font-size: 1.05rem;
+    font-size: 1.03rem;
+  }
+
+  .hero-actions {
+    width: 56%;
   }
 
   .hero-actions .button {
-    min-height: 3.85rem;
+    min-height: 3.65rem;
+    font-size: 0.96rem;
   }
 
   .hero-person {
-    height: 315px;
-    margin-top: 1rem;
-    background-size: contain;
+    right: -14vw !important;
+    bottom: 2.85rem !important;
+    width: 63vw;
+    height: 31vh;
   }
 }
 
 @media (max-width: 390px) {
   .hero h1 {
-    font-size: 3.35rem;
+    font-size: 3.25rem;
+  }
+
+  .hero-actions {
+    width: 55%;
   }
 
   .hero-person {
-    height: 285px;
+    right: -16vw !important;
+    width: 65vw;
+    height: 29vh;
   }
 }
