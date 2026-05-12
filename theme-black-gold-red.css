@@ -142,3 +142,70 @@ body { background: var(--off); }
   .accountability-copy h2 { font-size: 3.1rem; }
   .accountability-photo { aspect-ratio: 1 / 1; }
 }
+
+@keyframes premiumTextRise {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); filter: blur(6px); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+}
+
+@keyframes premiumGoldSweep {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@keyframes premiumButtonReveal {
+  from { opacity: 0; transform: translate3d(0, 12px, 0) scale(0.985); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.hero .kicker,
+.hero h1 span,
+.hero h1 em,
+.hero .lead,
+.hero .hero-actions .button,
+.mobile-kicker,
+.mobile-hero h1 span,
+.mobile-hero h1 em,
+.mobile-hero-copy p:not(.mobile-kicker),
+.mobile-hero-actions .button {
+  opacity: 0;
+  animation: premiumTextRise 0.82s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+.hero .kicker,
+.mobile-kicker { animation-delay: 0.08s; }
+.hero h1 span:nth-child(1),
+.mobile-hero h1 span:nth-child(1) { animation-delay: 0.2s; }
+.hero h1 span:nth-child(2),
+.mobile-hero h1 span:nth-child(2) { animation-delay: 0.32s; }
+.hero h1 em,
+.mobile-hero h1 em { animation-delay: 0.44s; background-size: 180% 180%; animation-name: premiumTextRise, premiumGoldSweep; animation-duration: 0.82s, 5s; animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1), ease-in-out; animation-fill-mode: forwards, both; animation-iteration-count: 1, infinite; animation-direction: normal, alternate; }
+.hero .lead,
+.mobile-hero-copy p:not(.mobile-kicker) { animation-delay: 0.58s; }
+.hero .hero-actions .button,
+.mobile-hero-actions .button { animation-name: premiumButtonReveal; animation-duration: 0.7s; }
+.hero .hero-actions .button:nth-child(1),
+.mobile-hero-actions .button:nth-child(1) { animation-delay: 0.74s; }
+.hero .hero-actions .button:nth-child(2),
+.mobile-hero-actions .button:nth-child(2) { animation-delay: 0.82s; }
+.hero .hero-actions .button:nth-child(3) { animation-delay: 0.9s; }
+.hero .hero-actions .button:nth-child(4) { animation-delay: 0.98s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .kicker,
+  .hero h1 span,
+  .hero h1 em,
+  .hero .lead,
+  .hero .hero-actions .button,
+  .mobile-kicker,
+  .mobile-hero h1 span,
+  .mobile-hero h1 em,
+  .mobile-hero-copy p:not(.mobile-kicker),
+  .mobile-hero-actions .button {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none;
+  }
+}
