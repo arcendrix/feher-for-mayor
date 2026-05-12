@@ -111,7 +111,7 @@
   .mobile-hero-person {
     position: absolute;
     z-index: 2;
-    right: -9vw;
+    right: 11vw;
     bottom: 5.25rem;
     width: 96vw;
     height: 50dvh;
@@ -162,7 +162,7 @@
   }
 
   .mobile-hero-person {
-    right: -12vw;
+    right: 8vw;
     bottom: 4.95rem;
     width: 100vw;
     height: 48dvh;
@@ -196,7 +196,7 @@
   }
 
   .mobile-hero-person {
-    right: -16vw;
+    right: 4vw;
     bottom: 4.65rem;
     width: 106vw;
     height: 46dvh;
