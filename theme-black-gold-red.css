@@ -50,6 +50,27 @@ body { background: var(--off); }
 .scorecard strong { color: var(--red); }
 .footer { background: #050505; }
 
+@media (min-width: 901px) {
+  .hero-person {
+    right: 4.5vw;
+    bottom: 5.5rem;
+    width: min(35vw, 520px);
+    height: 74vh;
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    pointer-events: none;
+    filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.38));
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 62%;
+  }
+}
+
 @media (max-width: 900px) {
   .hero:before { background: linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.8)), linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95)), url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat; }
   .plan-icon { width: 54px; height: 54px; }
