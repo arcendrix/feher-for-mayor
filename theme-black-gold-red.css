@@ -23,7 +23,16 @@ body { background: var(--off); }
 .plan-grid article:before { background: linear-gradient(90deg, var(--gold), var(--red)); }
 .plan-icon { width: 58px; height: 58px; background: rgba(217, 161, 41, 0.1); border-color: rgba(217, 161, 41, 0.42); color: var(--gold); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); }
 .plan-icon svg { width: 28px; height: 28px; display: block; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.section-grid h2,.section-heading h2,.proof-section h2,.donate-copy h2,.volunteer-section h2,.plan-grid h3,.event-row strong,.updates-grid h3 { color: #0d0d0d; }
+.section-grid h2,.section-heading h2,.proof-section h2,.donate-copy h2,.volunteer-section h2,.plan-grid h3,.event-row strong,.updates-grid h3,.photo-story-section h2 { color: #0d0d0d; }
+.campaign-photo { margin: 2rem 0 0; overflow: hidden; border-radius: 20px; border: 1px solid rgba(0,0,0,0.08); background: #050505; box-shadow: 0 22px 60px rgba(0,0,0,0.14); }
+.campaign-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.about-photo { aspect-ratio: 4 / 5; max-width: 520px; }
+.about-photo img { object-position: center top; }
+.campaign-photo figcaption { padding: 0.8rem 1rem; color: rgba(255,255,255,0.68); font-size: 0.85rem; background: #080808; }
+.photo-story-section { background: #f5f0e7; }
+.photo-story-grid { display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(320px, 1fr); gap: 3rem; align-items: center; }
+.wide-photo { margin: 0; aspect-ratio: 16 / 11; }
+.photo-story-grid p { margin-top: 1rem; color: #4e4e4e; font-size: 1.05rem; line-height: 1.75; }
 .proof-section,.volunteer-section,.donate-box { background: linear-gradient(135deg, #050505, #190507 78%, #2b090c); }
 .proof-section h2,.volunteer-section h2 { color: #fff; }
 .donate-section { background: #f0eadf; }
@@ -51,28 +60,8 @@ body { background: var(--off); }
 .footer { background: #050505; }
 
 @media (min-width: 901px) {
-  .hero-person {
-    right: 4.5vw;
-    bottom: 9rem;
-    width: min(35vw, 520px);
-    height: 74vh;
-    background-position: center bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 2;
-    pointer-events: none;
-    filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.38));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,0.68) 88%, rgba(0,0,0,0.18) 96%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,0.68) 88%, rgba(0,0,0,0.18) 96%, rgba(0,0,0,0) 100%);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 3;
-    max-width: 62%;
-  }
+  .hero-person { right: 4.5vw; bottom: 9rem; width: min(35vw, 520px); height: 74vh; background-position: center bottom; background-size: contain; background-repeat: no-repeat; z-index: 2; pointer-events: none; filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.38)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,0.68) 88%, rgba(0,0,0,0.18) 96%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,0.68) 88%, rgba(0,0,0,0.18) 96%, rgba(0,0,0,0) 100%); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+  .hero-content { position: relative; z-index: 3; max-width: 62%; }
 }
 
 @media (max-width: 900px) {
@@ -81,9 +70,12 @@ body { background: var(--off); }
   .plan-icon svg { width: 26px; height: 26px; }
   .donation-requirements { grid-template-columns: 1fr; }
   .bank-link-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .photo-story-grid,.about-with-photo { grid-template-columns: 1fr; }
+  .about-photo { max-width: 100%; }
 }
 
 @media (max-width: 520px) {
   .bank-link-grid { grid-template-columns: 1fr; }
   .bank-link-panel { padding: 1rem; }
+  .campaign-photo { border-radius: 16px; }
 }
