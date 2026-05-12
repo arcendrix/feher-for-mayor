@@ -84,8 +84,10 @@ body { background: var(--off); }
 .footer { background: #050505; }
 
 @media (min-width: 901px) {
+  .hero-content { position: relative; z-index: 3; max-width: 66%; }
+  .hero-actions { width: min(100%, 760px); display: grid; grid-template-columns: repeat(4, max-content); gap: 1rem; justify-content: start; }
+  .hero-actions .button { min-width: 154px; }
   .hero-person { right: 4.5vw; bottom: 9rem; width: min(35vw, 520px); height: 74vh; background-position: center bottom; background-size: contain; background-repeat: no-repeat; z-index: 2; pointer-events: none; filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.38)); -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,0.68) 88%, rgba(0,0,0,0.18) 96%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,0.68) 88%, rgba(0,0,0,0.18) 96%, rgba(0,0,0,0) 100%); -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
-  .hero-content { position: relative; z-index: 3; max-width: 62%; }
 }
 
 @media (max-width: 1180px) and (min-width: 901px) {
@@ -93,6 +95,7 @@ body { background: var(--off); }
   .plan-photo { max-width: 760px; }
   .plan-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .plan-grid article { min-height: 315px; }
+  .hero-actions { grid-template-columns: repeat(2, max-content); }
 }
 
 @media (max-width: 900px) {
