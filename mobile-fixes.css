@@ -4,23 +4,23 @@
   }
 
   .topbar {
-    padding: 1.1rem 4vw 0;
+    padding: 1.35rem 4vw 0;
     align-items: flex-start;
   }
 
   .brand strong {
-    font-size: 2.45rem;
-    line-height: 0.82;
+    font-size: 2.35rem;
+    line-height: 0.84;
   }
 
   .brand span {
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     letter-spacing: 0.2rem;
     text-align: left;
   }
 
   .menu-toggle {
-    padding: 0.72rem 1rem;
+    padding: 0.78rem 1.05rem;
     font-size: 1rem;
     background: rgba(3, 24, 43, 0.64);
   }
@@ -28,8 +28,8 @@
   .hero {
     display: block;
     position: relative;
-    min-height: 100svh;
-    padding: 10rem 4vw 2.6rem;
+    min-height: 112svh;
+    padding: 11.35rem 4vw 4.4rem;
   }
 
   .hero:before {
@@ -40,7 +40,7 @@
   }
 
   .hero:after {
-    height: 40%;
+    height: 42%;
   }
 
   .hero-content {
@@ -50,38 +50,38 @@
   }
 
   .kicker {
-    font-size: 0.78rem;
-    letter-spacing: 0.22rem;
-    margin-bottom: 0.95rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.24rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.25rem, 13vw, 4.5rem);
-    line-height: 0.88;
+    font-size: clamp(3.05rem, 12.4vw, 4.25rem);
+    line-height: 0.93;
     max-width: 100%;
   }
 
   .lead {
-    margin-top: 1.05rem;
-    max-width: 92%;
+    margin-top: 1.35rem;
+    max-width: 90%;
     font-size: 0.96rem;
-    line-height: 1.45;
+    line-height: 1.52;
   }
 
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
+    gap: 0.75rem;
     position: relative;
     z-index: 4;
-    width: 72%;
+    width: 74%;
     max-width: 430px;
-    margin-top: 1.35rem;
+    margin-top: 1.75rem;
   }
 
   .hero-actions .button {
     min-height: 3.35rem;
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     padding: 0.82rem 0.65rem;
     text-align: center;
     white-space: nowrap;
@@ -92,9 +92,9 @@
     display: block !important;
     z-index: 2;
     right: -8vw !important;
-    bottom: 11.5rem !important;
-    width: 84vw;
-    height: 56vh;
+    bottom: 13.25rem !important;
+    width: 82vw;
+    height: 54vh;
     margin: 0 !important;
     opacity: 1;
     background-position: center bottom;
@@ -115,65 +115,74 @@
 
 @media (max-width: 520px) {
   .hero {
-    padding-top: 9.8rem;
-    padding-bottom: 2.3rem;
+    min-height: 112svh;
+    padding-top: 11.15rem;
+    padding-bottom: 4.1rem;
   }
 
   .hero h1 {
-    font-size: clamp(2.95rem, 12.2vw, 3.95rem);
-    line-height: 0.9;
+    font-size: clamp(2.78rem, 11.6vw, 3.7rem);
+    line-height: 0.95;
   }
 
   .lead {
+    margin-top: 1.25rem;
     font-size: 0.9rem;
-    max-width: 86%;
+    max-width: 84%;
+    line-height: 1.55;
   }
 
   .hero-actions {
-    width: 76%;
-    gap: 0.62rem;
+    width: 78%;
+    gap: 0.68rem;
+    margin-top: 1.65rem;
   }
 
   .hero-actions .button {
-    min-height: 3.08rem;
-    font-size: 0.78rem;
+    min-height: 3.05rem;
+    font-size: 0.76rem;
     padding: 0.78rem 0.5rem;
   }
 
   .hero-person {
-    right: -10vw !important;
-    bottom: 10.75rem !important;
-    width: 88vw;
-    height: 52vh;
+    right: -11vw !important;
+    bottom: 12.7rem !important;
+    width: 84vw;
+    height: 49vh;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0.62) 83%, rgba(0,0,0,0.12) 94%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0.62) 83%, rgba(0,0,0,0.12) 94%, rgba(0,0,0,0) 100%);
   }
 }
 
 @media (max-width: 390px) {
+  .hero {
+    min-height: 114svh;
+  }
+
   .hero h1 {
-    font-size: 2.7rem;
+    font-size: 2.58rem;
   }
 
   .lead {
     font-size: 0.86rem;
+    max-width: 83%;
   }
 
   .hero-actions {
-    width: 78%;
-    gap: 0.55rem;
+    width: 80%;
+    gap: 0.6rem;
   }
 
   .hero-actions .button {
     min-height: 2.95rem;
-    font-size: 0.74rem;
+    font-size: 0.72rem;
   }
 
   .hero-person {
-    right: -12vw !important;
-    bottom: 10.25rem !important;
-    width: 92vw;
-    height: 49vh;
+    right: -13vw !important;
+    bottom: 12.35rem !important;
+    width: 88vw;
+    height: 46vh;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(0,0,0,0.58) 82%, rgba(0,0,0,0.1) 94%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 66%, rgba(0,0,0,0.58) 82%, rgba(0,0,0,0.1) 94%, rgba(0,0,0,0) 100%);
   }
