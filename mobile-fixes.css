@@ -28,8 +28,9 @@
   .hero {
     display: block;
     position: relative;
-    min-height: 105svh;
-    padding: 10.75rem 4vw 3.35rem;
+    min-height: 100svh;
+    padding: 10.75rem 4vw 1.8rem;
+    overflow: hidden;
   }
 
   .hero:before {
@@ -40,7 +41,7 @@
   }
 
   .hero:after {
-    height: 42%;
+    height: 26%;
   }
 
   .hero-content {
@@ -115,9 +116,9 @@
 
 @media (max-width: 520px) {
   .hero {
-    min-height: 105svh;
+    min-height: 100svh;
     padding-top: 10.65rem;
-    padding-bottom: 3.25rem;
+    padding-bottom: 1.6rem;
   }
 
   .hero h1 {
@@ -156,7 +157,7 @@
 
 @media (max-width: 390px) {
   .hero {
-    min-height: 106svh;
+    min-height: 100svh;
   }
 
   .hero h1 {
