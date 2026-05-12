@@ -43,6 +43,18 @@ body { background: var(--off); }
 .photo-story-grid p { margin-top: 1rem; color: #4e4e4e; font-size: 1.05rem; line-height: 1.75; }
 .proof-section,.volunteer-section,.donate-box { background: linear-gradient(135deg, #050505, #190507 78%, #2b090c); }
 .proof-section h2,.volunteer-section h2 { color: #fff; }
+.accountability-section { position: relative; overflow: hidden; border-bottom: 0; background: radial-gradient(circle at 82% 18%, rgba(217,161,41,0.18), transparent 28%), linear-gradient(135deg, #050505, #150506 55%, #31090d); }
+.accountability-section:before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size: 42px 42px; opacity: 0.28; pointer-events: none; }
+.accountability-copy,.accountability-card { position: relative; z-index: 1; }
+.accountability-copy h2 { color: #fff; max-width: 760px; }
+.accountability-copy p { color: rgba(255,255,255,0.82); font-size: 1.08rem; line-height: 1.75; max-width: 760px; }
+.accountability-tags { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.35rem; }
+.accountability-tags span { display: inline-flex; align-items: center; min-height: 38px; padding: 0.55rem 0.85rem; border: 1px solid rgba(217,161,41,0.36); color: var(--gold2); background: rgba(255,255,255,0.055); font-weight: 900; text-transform: uppercase; letter-spacing: 0.08rem; font-size: 0.72rem; }
+.accountability-card { display: grid; gap: 0.85rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); padding: 1rem; backdrop-filter: blur(10px); box-shadow: 0 24px 70px rgba(0,0,0,0.32); }
+.accountability-card div { display: grid; grid-template-columns: 44px 1fr; column-gap: 1rem; row-gap: 0.2rem; align-items: center; padding: 1rem; background: rgba(255,255,255,0.94); border: 1px solid rgba(217,161,41,0.16); }
+.accountability-card div:before { content: "✓"; grid-row: 1 / 3; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: #111; color: var(--gold2); font-weight: 950; }
+.accountability-card span { color: #252b31; font-weight: 750; line-height: 1.35; }
+.accountability-card strong { color: var(--red); font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.06rem; }
 .donate-section { background: #f0eadf; }
 .donate-clean { align-items: stretch; }
 .donate-clean .donate-copy,.donate-clean .donate-box { border-radius: 18px; }
@@ -87,8 +99,10 @@ body { background: var(--off); }
   .plan-icon svg { width: 26px; height: 26px; }
   .donation-requirements { grid-template-columns: 1fr; }
   .bank-link-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .photo-story-grid,.about-with-photo { grid-template-columns: 1fr; }
+  .photo-story-grid,.about-with-photo,.accountability-section { grid-template-columns: 1fr; }
   .about-photo { max-width: 100%; }
+  .accountability-card div { grid-template-columns: 38px 1fr; }
+  .accountability-card div:before { width: 36px; height: 36px; }
 }
 
 @media (max-width: 520px) {
@@ -97,4 +111,6 @@ body { background: var(--off); }
   .bank-link-grid { grid-template-columns: 1fr; }
   .bank-link-panel { padding: 1rem; }
   .campaign-photo { border-radius: 16px; }
+  .accountability-section { padding-top: 3.6rem; padding-bottom: 3.6rem; }
+  .accountability-copy h2 { font-size: 3.1rem; }
 }
