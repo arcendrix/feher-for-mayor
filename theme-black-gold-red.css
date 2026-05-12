@@ -8,233 +8,57 @@
   --ink: #151515;
 }
 
-body {
-  background: var(--off);
-}
-
-.topbar {
-  color: #fff;
-}
-
-.brand span,
-.kicker,
-.section-label,
-.icon,
-.plan-grid span,
-.updates-grid span {
-  color: var(--gold2);
-}
-
-.donate-link,
-.menu-toggle,
-.button.secondary {
-  border-color: var(--gold);
-}
-
-.button.primary {
-  background: linear-gradient(135deg, var(--gold2), var(--gold));
-  border-color: var(--gold);
-  color: #080808;
-}
-
-.button.secondary {
-  background: rgba(0, 0, 0, 0.36);
-  color: #fff;
-}
-
-.hero {
-  background: #020202;
-}
-
-.hero:before {
-  background:
-    linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.78) 42%, rgba(0,0,0,0.32) 76%),
-    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.92)),
-    url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
-}
-
-.hero:after {
-  background: linear-gradient(180deg, transparent, #020202);
-}
-
-.hero h1 em {
-  background: linear-gradient(180deg, #ffd76a, #c9881d);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.priority-strip {
-  background: linear-gradient(90deg, #020202, #120405 55%, #26090b);
-}
-
-.priority-strip article {
-  border-right-color: rgba(217, 161, 41, 0.32);
-}
-
-.plan-grid article:before {
-  background: linear-gradient(90deg, var(--gold), var(--red));
-}
-
-.plan-icon {
-  width: 58px;
-  height: 58px;
-  background: rgba(217, 161, 41, 0.1);
-  border-color: rgba(217, 161, 41, 0.42);
-  color: var(--gold);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
-}
-
-.plan-icon svg {
-  width: 28px;
-  height: 28px;
-  display: block;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.section-grid h2,
-.section-heading h2,
-.proof-section h2,
-.donate-copy h2,
-.volunteer-section h2,
-.plan-grid h3,
-.event-row strong,
-.updates-grid h3 {
-  color: #0d0d0d;
-}
-
-.proof-section,
-.volunteer-section,
-.donate-box {
-  background: linear-gradient(135deg, #050505, #190507 78%, #2b090c);
-}
-
-.proof-section h2,
-.volunteer-section h2 {
-  color: #fff;
-}
-
-.donate-section {
-  background: #f0eadf;
-}
-
-.donate-clean {
-  align-items: stretch;
-}
-
-.donate-clean .donate-copy,
-.donate-clean .donate-box {
-  border-radius: 18px;
-}
-
-.donate-clean .donate-copy h2 {
-  max-width: 760px;
-}
-
-.donation-requirements {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.7rem;
-  margin: 1.4rem 0 1rem;
-  padding: 1.15rem;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-left: 4px solid var(--gold);
-}
-
-.donation-requirements strong {
-  grid-column: 1 / -1;
-  color: #111;
-  font-size: 0.92rem;
-}
-
-.donation-requirements span {
-  padding: 0.75rem 0.85rem;
-  background: #f7f4ee;
-  border: 1px solid rgba(0,0,0,0.06);
-  font-weight: 800;
-  color: #1a1a1a;
-}
-
-.legal-note {
-  border-left-color: var(--red);
-  font-size: 0.94rem !important;
-  color: #4e4e4e !important;
-}
-
-.donate-clean .donate-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  min-height: 100%;
-  box-shadow: 0 24px 70px rgba(0,0,0,0.18);
-}
-
-.donate-clean .donate-box span {
-  color: rgba(255,255,255,0.62);
-}
-
-.donate-clean .donate-box strong {
-  font-size: clamp(1.55rem, 3.1vw, 2.65rem);
-  line-height: 0.95;
-  color: #fff;
-}
-
-.security-answer {
-  padding: 1rem;
-  border: 1px solid rgba(217,161,41,0.35);
-  background: rgba(255,255,255,0.06);
-}
-
-.security-answer span,
-.security-answer b {
-  display: block;
-}
-
-.security-answer span {
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  font-size: 0.7rem;
-  font-weight: 900;
-  margin-bottom: 0.35rem;
-}
-
-.security-answer b {
-  color: var(--gold2);
-  font-size: 1.65rem;
-}
-
-.scorecard strong {
-  color: var(--red);
-}
-
-.footer {
-  background: #050505;
-}
+body { background: var(--off); }
+.topbar { color: #fff; }
+.brand span,.kicker,.section-label,.icon,.plan-grid span,.updates-grid span { color: var(--gold2); }
+.donate-link,.menu-toggle,.button.secondary { border-color: var(--gold); }
+.button.primary { background: linear-gradient(135deg, var(--gold2), var(--gold)); border-color: var(--gold); color: #080808; }
+.button.secondary { background: rgba(0, 0, 0, 0.36); color: #fff; }
+.hero { background: #020202; }
+.hero:before { background: linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.78) 42%, rgba(0,0,0,0.32) 76%), linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.92)), url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat; }
+.hero:after { background: linear-gradient(180deg, transparent, #020202); }
+.hero h1 em { background: linear-gradient(180deg, #ffd76a, #c9881d); -webkit-background-clip: text; background-clip: text; }
+.priority-strip { background: linear-gradient(90deg, #020202, #120405 55%, #26090b); }
+.priority-strip article { border-right-color: rgba(217, 161, 41, 0.32); }
+.plan-grid article:before { background: linear-gradient(90deg, var(--gold), var(--red)); }
+.plan-icon { width: 58px; height: 58px; background: rgba(217, 161, 41, 0.1); border-color: rgba(217, 161, 41, 0.42); color: var(--gold); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); }
+.plan-icon svg { width: 28px; height: 28px; display: block; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.section-grid h2,.section-heading h2,.proof-section h2,.donate-copy h2,.volunteer-section h2,.plan-grid h3,.event-row strong,.updates-grid h3 { color: #0d0d0d; }
+.proof-section,.volunteer-section,.donate-box { background: linear-gradient(135deg, #050505, #190507 78%, #2b090c); }
+.proof-section h2,.volunteer-section h2 { color: #fff; }
+.donate-section { background: #f0eadf; }
+.donate-clean { align-items: stretch; }
+.donate-clean .donate-copy,.donate-clean .donate-box { border-radius: 18px; }
+.donate-clean .donate-copy h2 { max-width: 760px; }
+.donation-requirements { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; margin: 1.4rem 0 1rem; padding: 1.15rem; background: #fff; border: 1px solid rgba(0,0,0,0.08); border-left: 4px solid var(--gold); }
+.donation-requirements strong { grid-column: 1 / -1; color: #111; font-size: 0.92rem; }
+.donation-requirements span { padding: 0.75rem 0.85rem; background: #f7f4ee; border: 1px solid rgba(0,0,0,0.06); font-weight: 800; color: #1a1a1a; }
+.legal-note { border-left-color: var(--red); font-size: 0.94rem !important; color: #4e4e4e !important; }
+.donate-clean .donate-box { display: flex; flex-direction: column; justify-content: center; gap: 1rem; min-height: 100%; box-shadow: 0 24px 70px rgba(0,0,0,0.18); }
+.donate-clean .donate-box span { color: rgba(255,255,255,0.62); }
+.donate-clean .donate-box strong { font-size: clamp(1.55rem, 3.1vw, 2.65rem); line-height: 0.95; color: #fff; }
+.security-answer { padding: 1rem; border: 1px solid rgba(217,161,41,0.35); background: rgba(255,255,255,0.06); }
+.security-answer span,.security-answer b { display: block; }
+.security-answer span { text-transform: uppercase; letter-spacing: 0.12rem; font-size: 0.7rem; font-weight: 900; margin-bottom: 0.35rem; }
+.security-answer b { color: var(--gold2); font-size: 1.65rem; }
+.bank-link-panel { grid-column: 1 / -1; margin-top: 1rem; padding: 1.35rem; border-radius: 18px; background: #fff; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 18px 50px rgba(0,0,0,0.08); }
+.bank-link-panel strong { display: block; color: #111; font-size: 1.05rem; }
+.bank-link-panel p { margin: 0.45rem 0 1rem; color: #5a5a5a; line-height: 1.6; }
+.bank-link-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.65rem; }
+.bank-link-grid a { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem; text-decoration: none; border: 1px solid rgba(0,0,0,0.1); background: #f7f4ee; color: #111; font-weight: 900; border-radius: 10px; transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease; }
+.bank-link-grid a:hover { transform: translateY(-1px); border-color: var(--gold); background: #fff; }
+.scorecard strong { color: var(--red); }
+.footer { background: #050505; }
 
 @media (max-width: 900px) {
-  .hero:before {
-    background:
-      linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.8)),
-      linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95)),
-      url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
-  }
+  .hero:before { background: linear-gradient(90deg, rgba(0,0,0,0.96), rgba(0,0,0,0.8)), linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.95)), url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat; }
+  .plan-icon { width: 54px; height: 54px; }
+  .plan-icon svg { width: 26px; height: 26px; }
+  .donation-requirements { grid-template-columns: 1fr; }
+  .bank-link-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
-  .plan-icon {
-    width: 54px;
-    height: 54px;
-  }
-
-  .plan-icon svg {
-    width: 26px;
-    height: 26px;
-  }
-
-  .donation-requirements {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 520px) {
+  .bank-link-grid { grid-template-columns: 1fr; }
+  .bank-link-panel { padding: 1rem; }
 }
