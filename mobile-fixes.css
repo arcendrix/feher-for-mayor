@@ -28,8 +28,8 @@
   .hero {
     display: block;
     position: relative;
-    min-height: 114svh;
-    padding: 11.35rem 4vw 4.8rem;
+    min-height: 116svh;
+    padding: 11.35rem 4vw 5.2rem;
   }
 
   .hero:before {
@@ -76,7 +76,7 @@
     z-index: 4;
     width: 74%;
     max-width: 430px;
-    margin-top: 2.45rem;
+    margin-top: 2.9rem;
   }
 
   .hero-actions .button {
@@ -115,9 +115,9 @@
 
 @media (max-width: 520px) {
   .hero {
-    min-height: 114svh;
+    min-height: 116svh;
     padding-top: 11.15rem;
-    padding-bottom: 4.6rem;
+    padding-bottom: 5rem;
   }
 
   .hero h1 {
@@ -135,7 +135,7 @@
   .hero-actions {
     width: 78%;
     gap: 0.68rem;
-    margin-top: 2.35rem;
+    margin-top: 2.75rem;
   }
 
   .hero-actions .button {
@@ -156,7 +156,7 @@
 
 @media (max-width: 390px) {
   .hero {
-    min-height: 116svh;
+    min-height: 118svh;
   }
 
   .hero h1 {
@@ -171,7 +171,7 @@
   .hero-actions {
     width: 80%;
     gap: 0.6rem;
-    margin-top: 2.25rem;
+    margin-top: 2.6rem;
   }
 
   .hero-actions .button {
