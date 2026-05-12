@@ -28,8 +28,8 @@
   .hero {
     display: block;
     position: relative;
-    min-height: 116svh;
-    padding: 11.35rem 4vw 5.2rem;
+    min-height: 105svh;
+    padding: 10.75rem 4vw 3.35rem;
   }
 
   .hero:before {
@@ -52,20 +52,20 @@
   .kicker {
     font-size: 0.76rem;
     letter-spacing: 0.24rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.1rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.05rem, 12.4vw, 4.25rem);
+    font-size: clamp(3rem, 12vw, 4.1rem);
     line-height: 0.93;
     max-width: 100%;
   }
 
   .lead {
-    margin-top: 1.35rem;
+    margin-top: 1.25rem;
     max-width: 90%;
-    font-size: 0.96rem;
-    line-height: 1.52;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .hero-actions {
@@ -76,12 +76,12 @@
     z-index: 4;
     width: 74%;
     max-width: 430px;
-    margin-top: 2.9rem;
+    margin-top: 2.25rem;
   }
 
   .hero-actions .button {
-    min-height: 3.35rem;
-    font-size: 0.86rem;
+    min-height: 3.28rem;
+    font-size: 0.84rem;
     padding: 0.82rem 0.65rem;
     text-align: center;
     white-space: nowrap;
@@ -115,33 +115,33 @@
 
 @media (max-width: 520px) {
   .hero {
-    min-height: 116svh;
-    padding-top: 11.15rem;
-    padding-bottom: 5rem;
+    min-height: 105svh;
+    padding-top: 10.65rem;
+    padding-bottom: 3.25rem;
   }
 
   .hero h1 {
-    font-size: clamp(2.78rem, 11.6vw, 3.7rem);
+    font-size: clamp(2.74rem, 11.4vw, 3.62rem);
     line-height: 0.95;
   }
 
   .lead {
-    margin-top: 1.25rem;
-    font-size: 0.9rem;
+    margin-top: 1.15rem;
+    font-size: 0.88rem;
     max-width: 84%;
-    line-height: 1.55;
+    line-height: 1.52;
   }
 
   .hero-actions {
     width: 78%;
     gap: 0.68rem;
-    margin-top: 2.75rem;
+    margin-top: 2.1rem;
   }
 
   .hero-actions .button {
-    min-height: 3.05rem;
-    font-size: 0.76rem;
-    padding: 0.78rem 0.5rem;
+    min-height: 3rem;
+    font-size: 0.74rem;
+    padding: 0.76rem 0.5rem;
   }
 
   .hero-person {
@@ -156,27 +156,27 @@
 
 @media (max-width: 390px) {
   .hero {
-    min-height: 118svh;
+    min-height: 106svh;
   }
 
   .hero h1 {
-    font-size: 2.58rem;
+    font-size: 2.52rem;
   }
 
   .lead {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     max-width: 83%;
   }
 
   .hero-actions {
     width: 80%;
     gap: 0.6rem;
-    margin-top: 2.6rem;
+    margin-top: 2rem;
   }
 
   .hero-actions .button {
-    min-height: 2.95rem;
-    font-size: 0.72rem;
+    min-height: 2.9rem;
+    font-size: 0.7rem;
   }
 
   .hero-person {
