@@ -29,7 +29,7 @@
     display: block;
     position: relative;
     min-height: 100svh;
-    padding: 10rem 4vw 3rem;
+    padding: 10rem 4vw 2.6rem;
   }
 
   .hero:before {
@@ -56,42 +56,42 @@
   }
 
   .hero h1 {
-    font-size: clamp(3.35rem, 13.4vw, 4.7rem);
-    line-height: 0.86;
+    font-size: clamp(3.25rem, 13vw, 4.5rem);
+    line-height: 0.88;
     max-width: 100%;
   }
 
   .lead {
     margin-top: 1.05rem;
     max-width: 92%;
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     line-height: 1.45;
   }
 
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.72rem;
     position: relative;
     z-index: 4;
-    width: 52%;
-    margin-top: 1.45rem;
+    width: 46%;
+    margin-top: 1.35rem;
   }
 
   .hero-actions .button {
-    min-height: 3.55rem;
-    font-size: 0.95rem;
-    padding: 0.9rem 1rem;
+    min-height: 3.35rem;
+    font-size: 0.9rem;
+    padding: 0.82rem 0.8rem;
   }
 
   .hero-person {
     position: absolute !important;
     display: block !important;
     z-index: 2;
-    right: -8vw !important;
-    bottom: 2.2rem !important;
-    width: 70vw;
-    height: 42vh;
+    right: -9vw !important;
+    bottom: 1.6rem !important;
+    width: 82vw;
+    height: 48vh;
     margin: 0 !important;
     opacity: 1;
     background-position: center bottom;
@@ -108,52 +108,52 @@
 @media (max-width: 520px) {
   .hero {
     padding-top: 9.8rem;
-    padding-bottom: 2.75rem;
+    padding-bottom: 2.3rem;
   }
 
   .hero h1 {
-    font-size: clamp(3.05rem, 12.9vw, 4.1rem);
-    line-height: 0.88;
+    font-size: clamp(2.95rem, 12.4vw, 3.95rem);
+    line-height: 0.9;
   }
 
   .lead {
-    font-size: 0.93rem;
+    font-size: 0.9rem;
     max-width: 88%;
   }
 
   .hero-actions {
-    width: 50%;
+    width: 45%;
   }
 
   .hero-actions .button {
-    min-height: 3.4rem;
-    font-size: 0.9rem;
+    min-height: 3.2rem;
+    font-size: 0.84rem;
   }
 
   .hero-person {
-    right: -10vw !important;
-    bottom: 2.1rem !important;
-    width: 74vw;
-    height: 39vh;
+    right: -13vw !important;
+    bottom: 1.45rem !important;
+    width: 88vw;
+    height: 45vh;
   }
 }
 
 @media (max-width: 390px) {
   .hero h1 {
-    font-size: 2.85rem;
+    font-size: 2.75rem;
   }
 
   .lead {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 
   .hero-actions {
-    width: 49%;
+    width: 44%;
   }
 
   .hero-person {
-    right: -12vw !important;
-    width: 76vw;
-    height: 37vh;
+    right: -16vw !important;
+    width: 92vw;
+    height: 43vh;
   }
 }
