@@ -1,0 +1,48 @@
+@media (max-width: 900px) {
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 9rem 4vw 7.5rem;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    z-index: 2;
+  }
+
+  .hero-actions {
+    display: grid;
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-person {
+    display: block;
+    right: -18vw;
+    bottom: 8.3rem;
+    width: 70vw;
+    height: 34vh;
+    opacity: 0.75;
+    background-position: center bottom;
+    background-size: contain;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    padding-bottom: 8.5rem;
+  }
+
+  .hero-person {
+    right: -18vw;
+    bottom: 7.25rem;
+    width: 72vw;
+    height: 31vh;
+    opacity: 0.72;
+  }
+}
