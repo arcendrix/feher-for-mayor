@@ -9,7 +9,7 @@
   }
 
   .brand strong {
-    font-size: 2.15rem;
+    font-size: 2.18rem;
     line-height: 0.84;
   }
 
@@ -28,53 +28,60 @@
   .hero {
     position: relative;
     display: block;
-    min-height: 100dvh;
-    padding: 8.9rem 4vw 8.2rem;
+    height: 100dvh;
+    min-height: 0;
+    padding: 8.85rem 4vw 2.1rem;
     overflow: hidden;
   }
 
   .hero:before {
     background:
-      linear-gradient(90deg, rgba(3, 19, 35, 0.95), rgba(3, 19, 35, 0.78)),
-      linear-gradient(180deg, rgba(3, 19, 35, 0.10), rgba(3, 19, 35, 0.78)),
+      linear-gradient(90deg, rgba(3, 19, 35, 0.96), rgba(3, 19, 35, 0.78)),
+      linear-gradient(180deg, rgba(3, 19, 35, 0.12), rgba(3, 19, 35, 0.72) 68%, rgba(3, 19, 35, 0.82)),
       url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/london-hero.jpg') center/cover no-repeat;
   }
 
   .hero:after {
     content: "";
     position: absolute;
-    inset: auto 0 0 0;
-    height: 10rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.38));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 7rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.36));
     pointer-events: none;
     z-index: 1;
   }
 
   .hero-content {
-    position: static !important;
+    position: relative !important;
+    z-index: 5;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    min-height: calc(100dvh - 10.95rem);
+    width: 100%;
     max-width: 100%;
   }
 
-  .kicker,
-  .hero h1,
-  .lead {
-    position: relative;
-    z-index: 4;
-  }
-
   .kicker {
+    position: relative;
+    z-index: 5;
     font-size: 0.72rem;
     letter-spacing: 0.22rem;
     margin-bottom: 0.9rem;
   }
 
   .hero h1 {
-    font-size: clamp(2.5rem, 10.8vw, 3.5rem);
+    position: relative;
+    z-index: 5;
+    font-size: clamp(2.52rem, 10.7vw, 3.48rem);
     line-height: 0.94;
     max-width: 100%;
   }
 
   .lead {
+    position: relative;
+    z-index: 5;
     margin-top: 1rem;
     max-width: 84%;
     font-size: 0.84rem;
@@ -82,23 +89,21 @@
   }
 
   .hero-actions {
-    position: absolute;
-    left: 4vw;
-    right: 4vw;
-    bottom: 2.35rem;
+    align-self: end;
+    position: relative;
     z-index: 6;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-    margin: 0;
-    width: auto;
-    max-width: none;
+    gap: 0.78rem;
+    width: 84%;
+    max-width: 430px;
+    margin: 0 0 0.25rem;
   }
 
   .hero-actions .button {
-    min-height: 3rem;
-    font-size: 0.78rem;
-    padding: 0.76rem 0.5rem;
+    min-height: 2.95rem;
+    font-size: 0.74rem;
+    padding: 0.7rem 0.48rem;
     text-align: center;
     white-space: nowrap;
   }
@@ -107,10 +112,10 @@
     position: absolute !important;
     display: block !important;
     z-index: 2;
-    right: -16vw !important;
-    bottom: 5.4rem !important;
-    width: 104vw;
-    height: 50vh;
+    right: -20vw !important;
+    bottom: 4.65rem !important;
+    width: 112vw;
+    height: 53dvh;
     margin: 0 !important;
     opacity: 1;
     background-position: right bottom;
@@ -118,8 +123,10 @@
     background-repeat: no-repeat;
     pointer-events: none;
     filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5));
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.74) 86%, rgba(0,0,0,0.16) 97%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.74) 86%, rgba(0,0,0,0.16) 97%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.72) 86%, rgba(0,0,0,0.16) 97%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 72%, rgba(0,0,0,0.72) 86%, rgba(0,0,0,0.16) 97%, rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
   }
 
   .priority-strip {
@@ -129,67 +136,79 @@
 
 @media (max-width: 520px) {
   .hero {
-    padding-top: 8.75rem;
-    padding-bottom: 8rem;
+    height: 100dvh;
+    padding-top: 8.65rem;
+    padding-bottom: 1.95rem;
+  }
+
+  .hero-content {
+    min-height: calc(100dvh - 10.6rem);
   }
 
   .hero h1 {
-    font-size: clamp(2.3rem, 10.2vw, 3.1rem);
-    line-height: 0.95;
+    font-size: clamp(2.32rem, 10.2vw, 3.08rem);
+    line-height: 0.96;
   }
 
   .lead {
     font-size: 0.8rem;
     max-width: 83%;
+    line-height: 1.42;
   }
 
   .hero-actions {
-    bottom: 2.15rem;
-    gap: 0.72rem;
+    width: 86%;
+    gap: 0.68rem;
+    margin-bottom: 0.1rem;
   }
 
   .hero-actions .button {
-    min-height: 2.85rem;
-    font-size: 0.72rem;
+    min-height: 2.82rem;
+    font-size: 0.69rem;
+    padding: 0.66rem 0.44rem;
   }
 
   .hero-person {
-    right: -21vw !important;
-    bottom: 5rem !important;
-    width: 110vw;
-    height: 47vh;
+    right: -25vw !important;
+    bottom: 4.25rem !important;
+    width: 118vw;
+    height: 50dvh;
   }
 }
 
 @media (max-width: 390px) {
   .hero {
-    padding-top: 8.55rem;
-    padding-bottom: 7.7rem;
+    padding-top: 8.45rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .hero-content {
+    min-height: calc(100dvh - 10.25rem);
   }
 
   .hero h1 {
-    font-size: 2.18rem;
+    font-size: 2.2rem;
   }
 
   .lead {
-    font-size: 0.77rem;
+    font-size: 0.76rem;
     max-width: 82%;
   }
 
   .hero-actions {
-    bottom: 1.95rem;
-    gap: 0.62rem;
+    width: 88%;
+    gap: 0.58rem;
   }
 
   .hero-actions .button {
-    min-height: 2.7rem;
-    font-size: 0.67rem;
+    min-height: 2.66rem;
+    font-size: 0.65rem;
   }
 
   .hero-person {
-    right: -25vw !important;
-    bottom: 4.7rem !important;
-    width: 116vw;
-    height: 45vh;
+    right: -30vw !important;
+    bottom: 3.95rem !important;
+    width: 125vw;
+    height: 48dvh;
   }
 }
