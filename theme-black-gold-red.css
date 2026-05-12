@@ -53,7 +53,7 @@ body { background: var(--off); }
 @media (min-width: 901px) {
   .hero-person {
     right: 4.5vw;
-    bottom: 5.5rem;
+    bottom: 9rem;
     width: min(35vw, 520px);
     height: 74vh;
     background-position: center bottom;
