@@ -127,10 +127,10 @@
   .mobile-hero-person {
     position: absolute;
     z-index: 2;
-    right: -37vw;
-    bottom: 5.45rem;
-    width: 72vw;
-    height: 39svh;
+    right: -30vw;
+    bottom: 5.1rem;
+    width: 78vw;
+    height: 38svh;
     background: url('https://raw.githubusercontent.com/arcendrix/feher-for-mayor/main/assets/john-hero.png') right bottom / contain no-repeat;
     pointer-events: none;
     filter: drop-shadow(-16px 12px 34px rgba(0,0,0,0.7));
@@ -178,10 +178,10 @@
   }
 
   .mobile-hero-person {
-    right: -39vw;
-    bottom: 5.2rem;
-    width: 75vw;
-    height: 37svh;
+    right: -30vw;
+    bottom: 5.1rem;
+    width: 78vw;
+    height: 38svh;
   }
 
   .mobile-hero-actions {
@@ -230,10 +230,10 @@
   }
 
   .mobile-hero-person {
-    right: -41vw;
-    bottom: 4.85rem;
-    width: 78vw;
-    height: 35svh;
+    right: -31vw;
+    bottom: 4.75rem;
+    width: 80vw;
+    height: 36svh;
   }
 
   .mobile-hero-actions {
@@ -280,10 +280,10 @@
   }
 
   .mobile-hero-person {
-    right: -38vw;
-    bottom: 4.55rem;
-    width: 70vw;
-    height: 34svh;
+    right: -31vw;
+    bottom: 4.45rem;
+    width: 74vw;
+    height: 35svh;
   }
 
   .mobile-hero-actions {
