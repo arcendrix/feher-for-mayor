@@ -153,11 +153,11 @@
     display: block;
     position: absolute;
     z-index: 3;
-    right: -3vw;
-    bottom: calc(5.25rem + env(safe-area-inset-bottom));
-    width: clamp(16.5rem, 64vw, 24rem);
+    right: -10vw;
+    bottom: calc(9.25rem + env(safe-area-inset-bottom));
+    width: clamp(21.45rem, 83vw, 31.2rem);
     height: auto;
-    max-height: 47svh;
+    max-height: 61svh;
     object-fit: contain;
     object-position: right bottom;
     pointer-events: none;
@@ -216,10 +216,10 @@
   }
 
   img.mobile-hero-person {
-    right: -4vw;
-    bottom: calc(4.85rem + env(safe-area-inset-bottom));
-    width: 68vw;
-    max-height: 44svh;
+    right: -10vw;
+    bottom: calc(8.45rem + env(safe-area-inset-bottom));
+    width: 88vw;
+    max-height: 57svh;
   }
 
   .mobile-hero-actions {
@@ -261,10 +261,10 @@
   }
 
   img.mobile-hero-person {
-    right: -3vw;
-    bottom: calc(4.35rem + env(safe-area-inset-bottom));
-    width: 58vw;
-    max-height: 40svh;
+    right: -9vw;
+    bottom: calc(7.45rem + env(safe-area-inset-bottom));
+    width: 75vw;
+    max-height: 52svh;
   }
 
   .mobile-hero-actions {
