@@ -277,3 +277,15 @@
     font-size: .85rem;
   }
 }
+
+/* Desktop donation e-transfer email sizing fix */
+@media (min-width: 901px) {
+  .donate-clean .donate-box strong {
+    font-size: clamp(1.2rem, 2vw, 1.8rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+}
