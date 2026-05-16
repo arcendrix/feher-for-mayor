@@ -16,7 +16,7 @@ if (menuButton && nav) {
 }
 
 const volunteerForm = document.querySelector('.volunteer-form');
-const volunteerEndpoint = 'https://script.google.com/macros/s/AKfycbwIt5iLfDGrT1NBYEEBXMuH_6NmOauUbyQdayV0oOppGvrIUFmcYvEgNiCKV26T5TvgQA/exec';
+const volunteerEndpoint = 'https://script.google.com/macros/s/AKfycbwPadHpWHvkjTKsXihp4gpeBoK2Ltncp8nmNVtRfUd6e7gv8DZmSYQpyVny1vKVJejkuw/exec';
 
 if (volunteerForm) {
   volunteerForm.setAttribute('action', volunteerEndpoint);
