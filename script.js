@@ -117,6 +117,7 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
     }
     .sponsor-logo-card img {
       display: block;
+      width: 100%;
       max-width: 110%;
       max-height: 121px;
       object-fit: contain;
@@ -128,13 +129,33 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       line-height: 1.55;
     }
     @media (max-width: 900px) {
-      .sponsor-section { padding: 3.8rem 4vw; }
-      .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sponsor-section { padding: 3.4rem 4vw; }
+      .sponsor-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      .sponsor-logo-card {
+        min-height: 150px;
+        padding: 0.65rem;
+        border-radius: 14px;
+      }
+      .sponsor-logo-card img {
+        width: 96%;
+        max-width: 96%;
+        max-height: 132px;
+      }
     }
     @media (max-width: 520px) {
-      .sponsor-grid { grid-template-columns: 1fr; }
-      .sponsor-logo-card { min-height: 104px; }
-      .sponsor-logo-card img { max-height: 106px; }
+      .sponsor-section { padding: 3rem 4vw; }
+      .sponsor-logo-card {
+        min-height: 148px;
+        padding: 0.55rem;
+      }
+      .sponsor-logo-card img {
+        width: 97%;
+        max-width: 97%;
+        max-height: 130px;
+      }
     }
   `;
   document.head.appendChild(sponsorStyle);
