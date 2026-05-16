@@ -121,8 +121,8 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
     }
     .sponsor-logo-card img {
       display: block;
-      max-width: 100%;
-      max-height: 110px;
+      max-width: 110%;
+      max-height: 121px;
       object-fit: contain;
     }
     .sponsor-logo-card span {
@@ -143,7 +143,7 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
     @media (max-width: 520px) {
       .sponsor-grid { grid-template-columns: 1fr; }
       .sponsor-logo-card { min-height: 104px; }
-      .sponsor-logo-card img { max-height: 96px; }
+      .sponsor-logo-card img { max-height: 106px; }
     }
   `;
   document.head.appendChild(sponsorStyle);
