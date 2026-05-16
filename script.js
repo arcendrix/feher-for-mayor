@@ -68,8 +68,101 @@ if (volunteerForm) {
   });
 }
 
+const volunteerSection = document.querySelector('#volunteer');
+
+if (volunteerSection && !document.querySelector('.sponsor-section')) {
+  const sponsorStyle = document.createElement('style');
+  sponsorStyle.textContent = `
+    .sponsor-section {
+      padding: 4.5rem 5vw;
+      background: #f5f0e7;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .sponsor-section .section-heading {
+      max-width: 820px;
+      margin-bottom: 2rem;
+    }
+    .sponsor-section h2 {
+      font-family: var(--cond);
+      font-size: clamp(2.7rem, 5vw, 5.2rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      color: #0d0d0d;
+    }
+    .sponsor-section p {
+      max-width: 720px;
+      margin-top: 0.85rem;
+      color: #4e4e4e;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .sponsor-logo-card {
+      min-height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.3rem;
+      border: 1px solid rgba(0,0,0,0.09);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 16px 38px rgba(0,0,0,0.07);
+      color: #111;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.08rem;
+    }
+    .sponsor-logo-card span {
+      display: block;
+      opacity: 0.72;
+      font-size: 0.9rem;
+    }
+    .sponsor-note {
+      margin-top: 1rem;
+      color: #666;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+    @media (max-width: 900px) {
+      .sponsor-section { padding: 3.8rem 4vw; }
+      .sponsor-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .sponsor-grid { grid-template-columns: 1fr; }
+      .sponsor-logo-card { min-height: 104px; }
+    }
+  `;
+  document.head.appendChild(sponsorStyle);
+
+  const sponsorSection = document.createElement('section');
+  sponsorSection.id = 'sponsors';
+  sponsorSection.className = 'sponsor-section';
+  sponsorSection.innerHTML = `
+    <div class="section-heading">
+      <div class="section-label">Business supporters</div>
+      <h2>Local businesses backing John.</h2>
+      <p>Thank you to the businesses and community partners helping support the campaign across London.</p>
+    </div>
+    <div class="sponsor-grid" aria-label="Business sponsor logos">
+      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
+      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
+      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
+      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
+    </div>
+    <p class="sponsor-note">Sponsor logos can be added here once approved artwork is provided by each business.</p>
+  `;
+
+  volunteerSection.insertAdjacentElement('afterend', sponsorSection);
+}
+
 const motionTargets = document.querySelectorAll(
-  '.hero h1, .mobile-hero h1, .lead, .mobile-hero-copy p, .section h2, .section-label, .updates-grid h3, .plan-grid h3'
+  '.hero h1, .mobile-hero h1, .lead, .mobile-hero-copy p, .section h2, .section-label, .updates-grid h3, .plan-grid h3, .sponsor-section h2'
 );
 
 motionTargets.forEach((element) => {
@@ -90,7 +183,7 @@ motionTargets.forEach((element) => {
 });
 
 const softMotionItems = document.querySelectorAll(
-  '.priority-strip article, .plan-grid article, .updates-grid article, .event-row div, .donate-box, .volunteer-form'
+  '.priority-strip article, .plan-grid article, .updates-grid article, .event-row div, .donate-box, .volunteer-form, .sponsor-logo-card'
 );
 
 softMotionItems.forEach((item) => {
