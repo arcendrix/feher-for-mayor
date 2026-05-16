@@ -122,12 +122,6 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       max-height: 121px;
       object-fit: contain;
     }
-    .sponsor-note {
-      margin-top: 1rem;
-      color: #666;
-      font-size: 0.86rem;
-      line-height: 1.55;
-    }
     @media (max-width: 900px) {
       .sponsor-section { padding: 3.4rem 4vw; }
       .sponsor-grid {
@@ -175,7 +169,6 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       <div class="sponsor-logo-card"><img src="assets/sponsor3.png" alt="Sponsor 3"></div>
       <div class="sponsor-logo-card"></div>
     </div>
-    <p class="sponsor-note">Sponsor logos can be added here once approved artwork is provided by each business.</p>
   `;
 
   volunteerSection.insertAdjacentElement('afterend', sponsorSection);
