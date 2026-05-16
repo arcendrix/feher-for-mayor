@@ -113,10 +113,6 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       border-radius: 16px;
       background: #fff;
       box-shadow: 0 16px 38px rgba(0,0,0,0.07);
-      color: #111;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: 0.08rem;
       overflow: hidden;
     }
     .sponsor-logo-card img {
@@ -124,11 +120,6 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       max-width: 110%;
       max-height: 121px;
       object-fit: contain;
-    }
-    .sponsor-logo-card span {
-      display: block;
-      opacity: 0.72;
-      font-size: 0.9rem;
     }
     .sponsor-note {
       margin-top: 1rem;
@@ -158,10 +149,10 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       <p>Thank you to the businesses and community partners helping support the campaign across London.</p>
     </div>
     <div class="sponsor-grid" aria-label="Business sponsor logos">
-      <div class="sponsor-logo-card"><img src="assets/sponsor1.png" alt="Endless Circle of Life sponsor logo"></div>
-      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
-      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
-      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
+      <div class="sponsor-logo-card"><img src="assets/sponsor1.png" alt="Sponsor 1"></div>
+      <div class="sponsor-logo-card"><img src="assets/sponsor2.png" alt="Sponsor 2"></div>
+      <div class="sponsor-logo-card"><img src="assets/sponsor3.png" alt="Sponsor 3"></div>
+      <div class="sponsor-logo-card"></div>
     </div>
     <p class="sponsor-note">Sponsor logos can be added here once approved artwork is provided by each business.</p>
   `;
