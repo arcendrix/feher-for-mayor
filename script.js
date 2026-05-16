@@ -117,6 +117,13 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       font-weight: 950;
       text-transform: uppercase;
       letter-spacing: 0.08rem;
+      overflow: hidden;
+    }
+    .sponsor-logo-card img {
+      display: block;
+      max-width: 100%;
+      max-height: 110px;
+      object-fit: contain;
     }
     .sponsor-logo-card span {
       display: block;
@@ -136,6 +143,7 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
     @media (max-width: 520px) {
       .sponsor-grid { grid-template-columns: 1fr; }
       .sponsor-logo-card { min-height: 104px; }
+      .sponsor-logo-card img { max-height: 96px; }
     }
   `;
   document.head.appendChild(sponsorStyle);
@@ -150,7 +158,7 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
       <p>Thank you to the businesses and community partners helping support the campaign across London.</p>
     </div>
     <div class="sponsor-grid" aria-label="Business sponsor logos">
-      <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
+      <div class="sponsor-logo-card"><img src="assets/sponsor1.png" alt="Endless Circle of Life sponsor logo"></div>
       <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
       <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
       <div class="sponsor-logo-card"><span>Sponsor Logo</span></div>
