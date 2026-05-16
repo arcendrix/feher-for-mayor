@@ -15,6 +15,59 @@ if (menuButton && nav) {
   });
 }
 
+const volunteerForm = document.querySelector('.volunteer-form');
+const volunteerEndpoint = 'https://script.google.com/macros/s/AKfycbwIt5iLfDGrT1NBYEEBXMuH_6NmOauUbyQdayV0oOppGvrIUFmcYvEgNiCKV26T5TvgQA/exec';
+
+if (volunteerForm) {
+  volunteerForm.setAttribute('action', volunteerEndpoint);
+  volunteerForm.setAttribute('method', 'POST');
+
+  volunteerForm.querySelectorAll('input[name^="_"], input[name="_honey"]').forEach((field) => {
+    field.remove();
+  });
+
+  volunteerForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitButton = volunteerForm.querySelector('button[type="submit"]');
+    const formNote = volunteerForm.querySelector('.form-note');
+    const originalButtonText = submitButton ? submitButton.textContent : '';
+    const formData = new FormData(volunteerForm);
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+
+    if (formNote) {
+      formNote.textContent = 'Sending your message to the campaign team...';
+    }
+
+    try {
+      await fetch(volunteerEndpoint, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      });
+
+      volunteerForm.reset();
+
+      if (formNote) {
+        formNote.textContent = 'Thank you. Your message has been sent to the campaign team.';
+      }
+    } catch (error) {
+      if (formNote) {
+        formNote.textContent = 'Something went wrong. Please email feherformayor@gmail.com directly.';
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText || 'Send';
+      }
+    }
+  });
+}
+
 const motionTargets = document.querySelectorAll(
   '.hero h1, .mobile-hero h1, .lead, .mobile-hero-copy p, .section h2, .section-label, .updates-grid h3, .plan-grid h3'
 );
