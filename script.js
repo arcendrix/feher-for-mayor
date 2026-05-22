@@ -34,30 +34,6 @@ if (nav && !nav.querySelector('a[href="#have-your-say"]')) {
   });
 }
 
-const heroActions = document.querySelector('.hero-actions');
-if (heroActions && !heroActions.querySelector('a[href="#have-your-say"]')) {
-  const shareIdeaButton = document.createElement('a');
-  shareIdeaButton.className = 'button secondary';
-  shareIdeaButton.href = '#have-your-say';
-  shareIdeaButton.textContent = 'Share an Idea';
-  heroActions.insertBefore(shareIdeaButton, heroActions.firstElementChild ? heroActions.firstElementChild.nextSibling : null);
-
-  const commentButton = document.createElement('a');
-  commentButton.className = 'button secondary mobile-hide';
-  commentButton.href = '#resident-comment';
-  commentButton.textContent = 'Leave a Comment';
-  heroActions.appendChild(commentButton);
-}
-
-const mobileHeroActions = document.querySelector('.mobile-hero-actions');
-if (mobileHeroActions && !mobileHeroActions.querySelector('a[href="#have-your-say"]')) {
-  const mobileHaveSay = document.createElement('a');
-  mobileHaveSay.className = 'button secondary';
-  mobileHaveSay.href = '#have-your-say';
-  mobileHaveSay.textContent = 'Have Your Say';
-  mobileHeroActions.insertBefore(mobileHaveSay, mobileHeroActions.firstElementChild ? mobileHeroActions.firstElementChild.nextSibling : null);
-}
-
 const volunteerSection = document.querySelector('#volunteer');
 
 if (volunteerSection && !document.querySelector('#have-your-say')) {
