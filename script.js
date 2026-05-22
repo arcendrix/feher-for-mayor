@@ -44,12 +44,11 @@ if (volunteerSection && !document.querySelector('#have-your-say')) {
       background: #fff;
       border-bottom: 1px solid rgba(0,0,0,0.1);
     }
-    .have-say-intro {
+    .have-say-wrap {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+      grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.74fr);
       gap: 3rem;
-      align-items: end;
-      margin-bottom: 2rem;
+      align-items: start;
     }
     .have-say-section h2 {
       font-family: var(--cond);
@@ -63,12 +62,27 @@ if (volunteerSection && !document.querySelector('#have-your-say')) {
       color: #4e5a66;
       font-size: 1.08rem;
       line-height: 1.75;
-      margin: 0;
+      margin-top: 1rem;
+      max-width: 760px;
     }
-    .have-say-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
+    .have-say-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1.4rem;
+    }
+    .have-say-points span {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(0,0,0,0.12);
+      background: #f7f4ee;
+      border-radius: 999px;
+      padding: 0.55rem 0.85rem;
+      color: #111;
+      font-size: 0.84rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
     .have-say-card {
       background: #f7f4ee;
@@ -117,7 +131,7 @@ if (volunteerSection && !document.querySelector('#have-your-say')) {
     }
     .campaign-submit-form textarea,
     .volunteer-form textarea {
-      min-height: 126px;
+      min-height: 142px;
       resize: vertical;
     }
     .campaign-submit-form .button {
@@ -131,7 +145,7 @@ if (volunteerSection && !document.querySelector('#have-your-say')) {
     }
     @media (max-width: 900px) {
       .have-say-section { padding: 4rem 4vw; }
-      .have-say-intro, .have-say-grid { grid-template-columns: 1fr; }
+      .have-say-wrap { grid-template-columns: 1fr; gap: 2rem; }
     }
   `;
   document.head.appendChild(haveSayStyle);
@@ -140,38 +154,29 @@ if (volunteerSection && !document.querySelector('#have-your-say')) {
   haveSaySection.id = 'have-your-say';
   haveSaySection.className = 'have-say-section';
   haveSaySection.innerHTML = `
-    <div class="have-say-intro">
+    <div class="have-say-wrap">
       <div>
         <div class="section-label">Have your say</div>
         <h2>Londoners should be heard.</h2>
+        <p class="intro-copy">Share an idea, raise a concern, or leave a comment for John and the campaign team. One simple form keeps it easy for residents and cleaner for the campaign to manage.</p>
+        <div class="have-say-points" aria-label="Submission types">
+          <span>Ideas</span>
+          <span>Comments</span>
+          <span>Concerns</span>
+          <span>Neighbourhood issues</span>
+        </div>
       </div>
-      <p class="intro-copy">Share an idea, raise a concern, or leave a comment for John and the campaign team. The best campaign input comes from people living with London’s problems every day.</p>
-    </div>
-    <div class="have-say-grid">
-      <article class="have-say-card" id="share-an-idea">
-        <h3>Share an idea</h3>
-        <p>Have an idea to improve London, your neighbourhood, city services, infrastructure, safety, housing, or local business? Send it directly to the campaign team.</p>
+      <article class="have-say-card">
+        <h3>Send John a message</h3>
+        <p>Tell John what matters to you, your neighbourhood, or the future of London.</p>
         <form class="campaign-submit-form" action="${campaignEndpoint}" method="POST">
-          <input type="hidden" name="submissionType" value="Idea">
+          <label><span>What are you sending?</span><select name="submissionType" required><option value="Idea">Idea</option><option value="Comment">Comment</option><option value="Concern">Concern</option><option value="General Message">General message</option></select></label>
           <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
           <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
           <label><span>Neighbourhood / Area</span><input type="text" name="area" placeholder="Old South, Byron, Argyle, downtown..."></label>
-          <label><span>Your idea</span><textarea name="message" placeholder="Tell John your idea for London" required></textarea></label>
-          <button class="button primary" type="submit">Submit Idea</button>
-          <p class="form-note">Your idea will be sent to the campaign team.</p>
-        </form>
-      </article>
-      <article class="have-say-card" id="resident-comment">
-        <h3>Leave a comment</h3>
-        <p>Want to share a concern, story, or message about what you are seeing in London? Leave a comment so your voice is part of the conversation.</p>
-        <form class="campaign-submit-form" action="${campaignEndpoint}" method="POST">
-          <input type="hidden" name="submissionType" value="Comment">
-          <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
-          <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
-          <label><span>Neighbourhood / Area</span><input type="text" name="area" placeholder="Where in London are you from?"></label>
-          <label><span>Your comment</span><textarea name="message" placeholder="Tell John what you want him to hear" required></textarea></label>
-          <button class="button primary" type="submit">Send Comment</button>
-          <p class="form-note">Your comment will be sent to the campaign team.</p>
+          <label><span>Message</span><textarea name="message" placeholder="Share your idea, comment, concern, or message for John" required></textarea></label>
+          <button class="button primary" type="submit">Send Message</button>
+          <p class="form-note">Your message will be sent to the campaign team.</p>
         </form>
       </article>
     </div>
@@ -206,12 +211,7 @@ function wireCampaignForm(form) {
     try {
       await fetch(campaignEndpoint, { method: 'POST', mode: 'no-cors', body: formData });
       form.reset();
-      const type = formData.get('submissionType');
-      if (formNote) formNote.textContent = type === 'Idea'
-        ? 'Thank you. Your idea has been sent to the campaign team.'
-        : type === 'Comment'
-          ? 'Thank you. Your comment has been sent to the campaign team.'
-          : 'Thank you. Your message has been sent to the campaign team.';
+      if (formNote) formNote.textContent = 'Thank you. Your message has been sent to the campaign team.';
     } catch (error) {
       if (formNote) formNote.textContent = 'Something went wrong. Please email feherformayor@gmail.com directly.';
     } finally {
