@@ -1,5 +1,6 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const campaignEndpoint = 'https://script.google.com/macros/s/AKfycbwPadHpWHvkjTKsXihp4gpeBoK2Ltncp8nmNVtRfUd6e7gv8DZmSYQpyVny1vKVJejkuw/exec';
 
 if (menuButton && nav) {
   menuButton.addEventListener('click', () => {
@@ -15,22 +16,209 @@ if (menuButton && nav) {
   });
 }
 
-const volunteerForm = document.querySelector('.volunteer-form');
-const volunteerEndpoint = 'https://script.google.com/macros/s/AKfycbwPadHpWHvkjTKsXihp4gpeBoK2Ltncp8nmNVtRfUd6e7gv8DZmSYQpyVny1vKVJejkuw/exec';
+if (nav && !nav.querySelector('a[href="#have-your-say"]')) {
+  const donateLink = nav.querySelector('.donate-link');
+  const haveSayNavLink = document.createElement('a');
+  haveSayNavLink.href = '#have-your-say';
+  haveSayNavLink.textContent = 'Have Your Say';
 
-if (volunteerForm) {
-  volunteerForm.setAttribute('action', volunteerEndpoint);
-  volunteerForm.setAttribute('method', 'POST');
+  if (donateLink) {
+    nav.insertBefore(haveSayNavLink, donateLink);
+  } else {
+    nav.appendChild(haveSayNavLink);
+  }
 
-  volunteerForm.querySelectorAll('input[name^="_"], input[name="_honey"]').forEach((field) => field.remove());
+  haveSayNavLink.addEventListener('click', () => {
+    nav.classList.remove('is-open');
+    if (menuButton) menuButton.setAttribute('aria-expanded', 'false');
+  });
+}
 
-  volunteerForm.addEventListener('submit', async (event) => {
+const heroActions = document.querySelector('.hero-actions');
+if (heroActions && !heroActions.querySelector('a[href="#have-your-say"]')) {
+  const shareIdeaButton = document.createElement('a');
+  shareIdeaButton.className = 'button secondary';
+  shareIdeaButton.href = '#have-your-say';
+  shareIdeaButton.textContent = 'Share an Idea';
+  heroActions.insertBefore(shareIdeaButton, heroActions.firstElementChild ? heroActions.firstElementChild.nextSibling : null);
+
+  const commentButton = document.createElement('a');
+  commentButton.className = 'button secondary mobile-hide';
+  commentButton.href = '#resident-comment';
+  commentButton.textContent = 'Leave a Comment';
+  heroActions.appendChild(commentButton);
+}
+
+const mobileHeroActions = document.querySelector('.mobile-hero-actions');
+if (mobileHeroActions && !mobileHeroActions.querySelector('a[href="#have-your-say"]')) {
+  const mobileHaveSay = document.createElement('a');
+  mobileHaveSay.className = 'button secondary';
+  mobileHaveSay.href = '#have-your-say';
+  mobileHaveSay.textContent = 'Have Your Say';
+  mobileHeroActions.insertBefore(mobileHaveSay, mobileHeroActions.firstElementChild ? mobileHeroActions.firstElementChild.nextSibling : null);
+}
+
+const volunteerSection = document.querySelector('#volunteer');
+
+if (volunteerSection && !document.querySelector('#have-your-say')) {
+  const haveSayStyle = document.createElement('style');
+  haveSayStyle.textContent = `
+    .have-say-section {
+      padding: 5.2rem 5vw;
+      background: #fff;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .have-say-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: 2rem;
+    }
+    .have-say-section h2 {
+      font-family: var(--cond);
+      font-size: clamp(3rem, 5.7vw, 6rem);
+      line-height: 0.88;
+      text-transform: uppercase;
+      letter-spacing: -0.025em;
+      color: var(--navy);
+    }
+    .have-say-section .intro-copy {
+      color: #4e5a66;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .have-say-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .have-say-card {
+      background: #f7f4ee;
+      border: 1px solid var(--darkline);
+      border-radius: 18px;
+      padding: 1.35rem;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.06);
+    }
+    .have-say-card h3 {
+      color: #000;
+      font-size: 1.35rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 950;
+      margin-bottom: 0.55rem;
+    }
+    .have-say-card p {
+      color: #4e5a66;
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .campaign-submit-form {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+    .campaign-submit-form label {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.88rem;
+      font-weight: 900;
+      color: var(--ink);
+    }
+    .campaign-submit-form input,
+    .campaign-submit-form textarea,
+    .campaign-submit-form select,
+    .volunteer-form textarea {
+      width: 100%;
+      font: inherit;
+      padding: 0.9rem;
+      border: 1px solid #cfd6dd;
+      border-radius: 4px;
+      background: #fff;
+      color: var(--ink);
+    }
+    .campaign-submit-form textarea,
+    .volunteer-form textarea {
+      min-height: 126px;
+      resize: vertical;
+    }
+    .campaign-submit-form .button {
+      width: fit-content;
+      cursor: pointer;
+    }
+    .campaign-submit-form .form-note {
+      font-size: 0.85rem !important;
+      margin: 0 !important;
+      color: #5d6671 !important;
+    }
+    @media (max-width: 900px) {
+      .have-say-section { padding: 4rem 4vw; }
+      .have-say-intro, .have-say-grid { grid-template-columns: 1fr; }
+    }
+  `;
+  document.head.appendChild(haveSayStyle);
+
+  const haveSaySection = document.createElement('section');
+  haveSaySection.id = 'have-your-say';
+  haveSaySection.className = 'have-say-section';
+  haveSaySection.innerHTML = `
+    <div class="have-say-intro">
+      <div>
+        <div class="section-label">Have your say</div>
+        <h2>Londoners should be heard.</h2>
+      </div>
+      <p class="intro-copy">Share an idea, raise a concern, or leave a comment for John and the campaign team. The best campaign input comes from people living with London’s problems every day.</p>
+    </div>
+    <div class="have-say-grid">
+      <article class="have-say-card" id="share-an-idea">
+        <h3>Share an idea</h3>
+        <p>Have an idea to improve London, your neighbourhood, city services, infrastructure, safety, housing, or local business? Send it directly to the campaign team.</p>
+        <form class="campaign-submit-form" action="${campaignEndpoint}" method="POST">
+          <input type="hidden" name="submissionType" value="Idea">
+          <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+          <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+          <label><span>Neighbourhood / Area</span><input type="text" name="area" placeholder="Old South, Byron, Argyle, downtown..."></label>
+          <label><span>Your idea</span><textarea name="message" placeholder="Tell John your idea for London" required></textarea></label>
+          <button class="button primary" type="submit">Submit Idea</button>
+          <p class="form-note">Your idea will be sent to the campaign team.</p>
+        </form>
+      </article>
+      <article class="have-say-card" id="resident-comment">
+        <h3>Leave a comment</h3>
+        <p>Want to share a concern, story, or message about what you are seeing in London? Leave a comment so your voice is part of the conversation.</p>
+        <form class="campaign-submit-form" action="${campaignEndpoint}" method="POST">
+          <input type="hidden" name="submissionType" value="Comment">
+          <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+          <label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required></label>
+          <label><span>Neighbourhood / Area</span><input type="text" name="area" placeholder="Where in London are you from?"></label>
+          <label><span>Your comment</span><textarea name="message" placeholder="Tell John what you want him to hear" required></textarea></label>
+          <button class="button primary" type="submit">Send Comment</button>
+          <p class="form-note">Your comment will be sent to the campaign team.</p>
+        </form>
+      </article>
+    </div>
+  `;
+
+  volunteerSection.insertAdjacentElement('beforebegin', haveSaySection);
+}
+
+function wireCampaignForm(form) {
+  form.setAttribute('action', campaignEndpoint);
+  form.setAttribute('method', 'POST');
+
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const submitButton = volunteerForm.querySelector('button[type="submit"]');
-    const formNote = volunteerForm.querySelector('.form-note');
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formNote = form.querySelector('.form-note');
     const originalButtonText = submitButton ? submitButton.textContent : '';
-    const formData = new FormData(volunteerForm);
+    const formData = new FormData(form);
+
+    if (!formData.get('submittedAt')) {
+      formData.append('submittedAt', new Date().toISOString());
+    }
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -40,9 +228,14 @@ if (volunteerForm) {
     if (formNote) formNote.textContent = 'Sending your message to the campaign team...';
 
     try {
-      await fetch(volunteerEndpoint, { method: 'POST', mode: 'no-cors', body: formData });
-      volunteerForm.reset();
-      if (formNote) formNote.textContent = 'Thank you. Your message has been sent to the campaign team.';
+      await fetch(campaignEndpoint, { method: 'POST', mode: 'no-cors', body: formData });
+      form.reset();
+      const type = formData.get('submissionType');
+      if (formNote) formNote.textContent = type === 'Idea'
+        ? 'Thank you. Your idea has been sent to the campaign team.'
+        : type === 'Comment'
+          ? 'Thank you. Your comment has been sent to the campaign team.'
+          : 'Thank you. Your message has been sent to the campaign team.';
     } catch (error) {
       if (formNote) formNote.textContent = 'Something went wrong. Please email feherformayor@gmail.com directly.';
     } finally {
@@ -54,7 +247,20 @@ if (volunteerForm) {
   });
 }
 
-const volunteerSection = document.querySelector('#volunteer');
+const volunteerForm = document.querySelector('.volunteer-form');
+if (volunteerForm) {
+  volunteerForm.querySelectorAll('input[name^="_"], input[name="_honey"]').forEach((field) => field.remove());
+  if (!volunteerForm.querySelector('input[name="submissionType"]')) {
+    const hiddenType = document.createElement('input');
+    hiddenType.type = 'hidden';
+    hiddenType.name = 'submissionType';
+    hiddenType.value = 'Get Involved';
+    volunteerForm.prepend(hiddenType);
+  }
+  wireCampaignForm(volunteerForm);
+}
+
+document.querySelectorAll('.campaign-submit-form').forEach(wireCampaignForm);
 
 if (volunteerSection && !document.querySelector('.faq-section')) {
   const faqStyle = document.createElement('style');
@@ -167,7 +373,7 @@ if (volunteerSection && !document.querySelector('.sponsor-section')) {
   volunteerSection.insertAdjacentElement('afterend', sponsorSection);
 }
 
-const motionTargets = document.querySelectorAll('.hero h1, .mobile-hero h1, .lead, .mobile-hero-copy p, .section h2, .section-label, .updates-grid h3, .plan-grid h3, .sponsor-section h2, .faq-section h2');
+const motionTargets = document.querySelectorAll('.hero h1, .mobile-hero h1, .lead, .mobile-hero-copy p, .section h2, .section-label, .updates-grid h3, .plan-grid h3, .sponsor-section h2, .faq-section h2, .have-say-section h2, .have-say-card h3');
 
 motionTargets.forEach((element) => {
   if (element.dataset.motionProcessed) return;
@@ -178,7 +384,7 @@ motionTargets.forEach((element) => {
   element.classList.add('motion-line');
 });
 
-const softMotionItems = document.querySelectorAll('.priority-strip article, .plan-grid article, .updates-grid article, .event-row div, .donate-box, .volunteer-form, .sponsor-logo-card, .faq-card');
+const softMotionItems = document.querySelectorAll('.priority-strip article, .plan-grid article, .updates-grid article, .event-row div, .donate-box, .volunteer-form, .sponsor-logo-card, .faq-card, .have-say-card');
 softMotionItems.forEach((item) => item.classList.add('motion-soft'));
 
 const revealElements = document.querySelectorAll('.motion-line, .motion-soft');
